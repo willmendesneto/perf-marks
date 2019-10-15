@@ -86,6 +86,12 @@ Removes the specified marker
 
 Removes all the marker
 
+## Publish
+
+this project is using `np` package to publish, which makes things straightforward. EX: `np <patch|minor|major>`
+
+> For more details, [please check np package on npmjs.com](https://www.npmjs.com/package/np)
+
 ## Author
 
 **Wilson Mendes (willmendesneto)**
