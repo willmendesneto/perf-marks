@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.0.1][] - 2019-10-16
+
 ### Updated
 
 - Removing sufix in `performance.measure` call
@@ -22,3 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/willmendesneto/perf-marks/tree/v1.0.0
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/willmendesneto/perf-marks/tree/v1.0.1
