@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Removing sufix in `performance.measure` call
 - Removing `src/index.tx` from code coverage evaluation
+- Replacing local demo in favour of Stackblitz playground `https://stackblitz.com/edit/perf-marks-playground`
 
 ## [1.0.0][] - 2019-10-16
 

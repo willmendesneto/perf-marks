@@ -1,6 +1,7 @@
 # Perf-marks
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/willmendesneto/perf-marks.svg)](https://greenkeeper.io/)
+[![npm](https://img.shields.io/badge/stackblitz-online-orange.svg)](https://stackblitz.com/edit/perf-marks-playground)
 
 [![npm version](https://badge.fury.io/js/perf-marks.svg)](http://badge.fury.io/js/perf-marks) [![npm downloads](https://img.shields.io/npm/dm/perf-marks.svg)](https://npmjs.org/perf-marks)
 [![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg?style=flat-square)](LICENSE)
@@ -46,7 +47,7 @@ $ choco install nodejs.install -version 6.10.2
 
 ## Demo
 
-Try out the [demo](https://github.com/willmendesneto/perf-marks/blob/master/demo/index.html)!
+Try out our [demo on Stackblitz](https://perf-marks-playground.stackblitz.io)!
 
 ## Run the app
 
