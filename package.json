@@ -1,0 +1,85 @@
+{
+  "name": "perf-marks",
+  "version": "1.0.0",
+  "author": "Will Mendes <willmendesneto@gmail.com>",
+  "description": "The simplest solution for feature toggle in Javascript. Simple how it should be.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willmendesneto/perf-marks.git"
+  },
+  "license": "MIT",
+  "main": "lib/perf-marks.js",
+  "types": "lib/perf-marks.d.ts",
+  "keywords": [
+    "perf-marks",
+    "performance",
+    "user timing api",
+    "timing",
+    "api"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-modules-umd": "^7.2.0",
+    "@babel/preset-env": "^7.6.3",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.0.10",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "babel-jest": "^24.9.0",
+    "bundlesize": "^0.17.0",
+    "changelog-verify": "^1.1.0",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "jsdom": "^15.2.0",
+    "lint-staged": "^9.4.2",
+    "mustache": "^3.0.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.4.3",
+    "typings": "^2.1.1",
+    "uglify-js": "^3.0.10",
+    "usertiming": "^0.1.8",
+    "version-changelog": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=6.10.2"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "build": "npm run compile && babel lib --out-dir lib && npm run build-min && npm run generate-banner",
+    "build-min": "uglifyjs lib/perf-marks.js --comments '/!/' -m --screw-ie8=true -c unused=false -o lib/perf-marks.min.js",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "check-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
+    "prepublish": "npm run build",
+    "generate-banner": "node ./scripts/generate-banner.js",
+    "bundlesize": "bundlesize",
+    "lint": "eslint '{scripts,src}/**/*.ts'",
+    "lint:fix": "eslint --fix '{scripts,src}/**/*.ts'",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
+  },
+  "bundlesize": [
+    {
+      "path": "./lib/perf-marks.min.js",
+      "maxSize": "597B"
+    }
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  }
+}

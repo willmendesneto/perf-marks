@@ -1,0 +1,14 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - node_modules
+os:
+  - linux
+  - osx
+script:
+  - npm run test
+  - npm run build
+  - npm run bundlesize
+after_success:
+  - npm run check-coverage

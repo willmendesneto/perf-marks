@@ -1,0 +1,5 @@
+# Required to ignore subpackage's node_modules folders.
+**/node_modules/**/*
+
+# Ignore all built artefacts.
+**/dist/**/*

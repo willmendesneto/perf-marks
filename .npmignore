@@ -1,0 +1,12 @@
+/.*/
+/demo/
+/test/
+/.*
+/bower.json
+/karma.conf.js
+/src
+/coverage
+/.nyc_output
+/.jest
+**/__tests__/
+/out-tsc
