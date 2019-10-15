@@ -70,7 +70,7 @@ const end = (
       return startTime ? { duration: getTimeNow() - startTime, startTime } : {};
     }
 
-    performance.measure(`${markName}-perf-marks`, markName, markNameToCompare || undefined);
+    performance.measure(markName, markName, markNameToCompare || undefined);
     const entry: PerformanceEntry | undefined = performance.getEntriesByName(markName).pop();
 
     if (entry) {

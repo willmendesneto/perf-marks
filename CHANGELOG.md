@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Removing sufix in `performance.measure` call
+- Removing `src/index.tx` from code coverage evaluation
+
 ## [1.0.0][] - 2019-10-16
 
 ### Added
@@ -14,6 +19,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Created `perf-marks` package
 - Adding `perf-marks` demo page
 
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/willmendesneto/perf-marks/tree/v1.0.0

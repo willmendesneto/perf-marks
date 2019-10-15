@@ -11,14 +11,14 @@ module.exports = {
   collectCoverageFrom: ['**/src/*.ts'],
   coverageThreshold: {
     global: {
-      branches: 57,
+      branches: 87,
       functions: 100,
-      lines: 80,
+      lines: 92,
       statements: 82,
     },
   },
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['/node_modules/', '/scripts/', '/dist/'],
+  testPathIgnorePatterns: ['/node_modules/', '/scripts/', '/dist/', '/src/index.[tj]s'],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
 };

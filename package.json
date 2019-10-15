@@ -68,7 +68,7 @@
   "bundlesize": [
     {
       "path": "./lib/perf-marks.min.js",
-      "maxSize": "597B"
+      "maxSize": "589B"
     }
   ],
   "husky": {
