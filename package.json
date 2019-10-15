@@ -2,7 +2,7 @@
   "name": "perf-marks",
   "version": "0.0.1",
   "author": "Will Mendes <willmendesneto@gmail.com>",
-  "description": "The simplest solution for feature toggle in Javascript. Simple how it should be.",
+  "description": "The simplest and lightweight solution for User Timing API in Javascript.",
   "repository": {
     "type": "git",
     "url": "https://github.com/willmendesneto/perf-marks.git"
