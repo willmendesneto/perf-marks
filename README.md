@@ -15,6 +15,10 @@
 
 The simplest and lightweight solution for [User Timing API](https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API) in Javascript. Simple how it should be.
 
+## Contributing
+
+Please check our [contributing.md](https://github.com/willmendesneto/perf-marks/blob/master/contributing.md) to know more about setup and how to contribute.
+
 ## Setup and installation
 
 Make sure that you are using the NodeJS version is the same as `.nvmrc` file version. If you don't have this version please use a version manager such as `nvm` or `n` to manage your local nodejs versions.
