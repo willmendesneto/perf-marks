@@ -18,6 +18,5 @@ script:
   - yarn bundlesize
 before_script:
   - yarn cache clean
-  - npm cache clean
 after_success:
   - yarn check-coverage
