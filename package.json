@@ -62,7 +62,7 @@
     "generate-banner": "node ./scripts/generate-banner.js",
     "bundlesize": "bundlesize",
     "lint": "eslint 'src/**/*.ts'",
-    "lint:fix": "eslint --fix '{scripts,src}/**/*.ts'",
+    "lint:fix": "eslint --fix 'src/**/*.ts'",
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "bundlesize": [
