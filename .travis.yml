@@ -7,8 +7,10 @@ os:
   - linux
   - osx
 script:
-  - npm run test
-  - npm run build
-  - npm run bundlesize
+  - yarn test
+  - yarn build
+  - yarn bundlesize
+before_script:
+  - yarn cache clean
 after_success:
-  - npm run check-coverage
+  - yarn check-coverage
