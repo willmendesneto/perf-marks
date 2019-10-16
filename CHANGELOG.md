@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Moving from Travis-CI to CircleCI to fix pipeline
 - Fixing coveralls integration
+- Fixing eslint in `scripts/generate-banner.js` file
 
 ### Added
 

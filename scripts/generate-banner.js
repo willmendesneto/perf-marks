@@ -1,10 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs');
-const path = require('path');
 const Mustache = require('mustache');
 const pkg = require('../package.json');
 
 const FILE_ENCODING = 'utf-8';
-const EOL = '\n';
 
 const readFile = filename => {
   return fs.readFileSync(filename, FILE_ENCODING);
