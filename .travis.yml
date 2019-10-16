@@ -1,16 +1,23 @@
 language: node_js
 cache:
-  yarn: true
-  directories:
-    - node_modules
+  npm: false
+  yarn: false
+# cache:
+#   yarn: true
+#   directories:
+#     - node_modules
+# sudo: required
 os:
   - linux
   - osx
+# before_install:
+#   - sudo sysctl fs.inotify.max_queued_events=524288
 script:
   - yarn test
   - yarn build
   - yarn bundlesize
 before_script:
   - yarn cache clean
+  - npm cache clean
 after_success:
   - yarn check-coverage
