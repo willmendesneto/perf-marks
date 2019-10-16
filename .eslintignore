@@ -1,5 +1,7 @@
-# Required to ignore subpackage's node_modules folders.
-**/node_modules/**/*
-
 # Ignore all built artefacts.
-**/dist/**/*
+.jest
+coverage
+lib
+node_modules
+flow-typed
+.yarn
