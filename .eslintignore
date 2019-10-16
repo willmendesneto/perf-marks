@@ -1,4 +1,5 @@
 # Ignore all built artefacts.
+.github
 .jest
 coverage
 lib

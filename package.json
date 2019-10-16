@@ -53,12 +53,12 @@
   },
   "scripts": {
     "compile": "tsc",
-    "build": "npm run compile && babel lib --out-dir lib && npm run build-min && npm run generate-banner",
+    "build": "yarn compile && babel lib --out-dir lib && yarn build-min && yarn generate-banner",
     "build-min": "uglifyjs lib/perf-marks.js --comments '/!/' -m --screw-ie8=true -c unused=false -o lib/perf-marks.min.js",
-    "pretest": "npm run lint",
+    "pretest": "yarn lint",
     "test": "jest",
     "check-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
-    "prepublish": "npm run build",
+    "prepublish": "yarn build",
     "generate-banner": "node ./scripts/generate-banner.js",
     "bundlesize": "bundlesize",
     "lint": "eslint 'src/**/*.ts'",
@@ -78,7 +78,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "npm run lint:fix",
+      "yarn lint:fix",
       "git add"
     ]
   }
