@@ -57,8 +57,7 @@ jobs:
       - run:
           name: Running unit tests
           command: |
-            sudo yarn test
-            sudo yarn coveralls
+            sudo yarn test:ci
   bundle_size:
     <<: *docker_defaults
     steps:
