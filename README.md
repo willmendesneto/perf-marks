@@ -6,7 +6,7 @@
 [![npm version](https://badge.fury.io/js/perf-marks.svg)](http://badge.fury.io/js/perf-marks) [![npm downloads](https://img.shields.io/npm/dm/perf-marks.svg)](https://npmjs.org/perf-marks)
 [![MIT License](https://img.shields.io/badge/license-MIT%20License-blue.svg?style=flat-square)](LICENSE)
 
-[![Build Status](https://travis-ci.org/willmendesneto/perf-marks.svg?branch=master)](https://travis-ci.org/willmendesneto/perf-marks)
+[![Build Status](https://circleci.com/gh/willmendesneto/perf-marks.svg?style=shield)](https://circleci.com/gh/willmendesneto/perf-marks)
 [![Coverage Status](https://coveralls.io/repos/willmendesneto/perf-marks/badge.svg?branch=master)](https://coveralls.io/r/willmendesneto/perf-marks?branch=master)
 [![Dependency Status](https://david-dm.org/willmendesneto/perf-marks.svg)](https://david-dm.org/willmendesneto/perf-marks)
 

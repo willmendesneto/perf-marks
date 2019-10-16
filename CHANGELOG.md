@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Improving CircleCI pipeline and npm scripts to run on it
+
+### Fixed
+
+- Moving from Travis-CI to CircleCI to fix pipeline
+- Fixing coveralls integration
+
+### Added
+
+- Adding `contributing.md` file and section in `README.md`
+
 ## [1.0.1][] - 2019-10-16
 
 ### Updated
@@ -24,7 +37,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/willmendesneto/perf-marks/tree/v1.0.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.1...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/willmendesneto/perf-marks/tree/v1.0.1
