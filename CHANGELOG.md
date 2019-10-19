@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Improving CircleCI pipeline and npm scripts to run on it
+- Updating dependencies
 
 ### Fixed
 
