@@ -52,18 +52,22 @@ const start = (markName: string): void => {
 };
 
 /**
+ * Response type of `PerfMarks.end()` method
+ *
+ */
+export type PerfMarksPerformanceEntry = PerformanceEntry | { duration?: number; startTime?: number };
+
+/**
  * Finishes performance measure of event and
  * clear marks and measure if applicable
  *
  * @param markName - Performance marker to be checked
+ * @param markNameToCompare - Optional mark to compare to
  *
- * @returns PerformanceEntry | { duration?: number; startTime?: number }
+ * @returns PerfMarksPerformanceEntry
  *
  */
-const end = (
-  markName: string,
-  markNameToCompare?: string,
-): PerformanceEntry | { duration?: number; startTime?: number } => {
+const end = (markName: string, markNameToCompare?: string): PerfMarksPerformanceEntry => {
   try {
     const startTime = marksMap[markName];
     if (!isUserTimingAPISupported) {

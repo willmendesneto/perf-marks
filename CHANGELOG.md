@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Adding `contributing.md` file and section in `README.md`
 - Adding package logo
+- Adding types for `PerfMarks.end()` response
 
 ## [1.0.1][] - 2019-10-16
 
