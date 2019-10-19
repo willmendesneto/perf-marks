@@ -63,8 +63,8 @@
     "prepublish": "yarn build",
     "generate-banner": "node ./scripts/generate-banner.js",
     "bundlesize": "bundlesize",
-    "lint": "eslint '{scripts,src}/**/*.ts'",
-    "lint:fix": "eslint --fix '{scripts,src}/**/*.ts'",
+    "lint": "eslint '{scripts,src}/**/*.[tj]s'",
+    "lint:fix": "eslint --fix '{scripts,src}/**/*.[tj]s'",
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "bundlesize": [
