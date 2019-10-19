@@ -13,6 +13,8 @@
 [![NPM](https://nodei.co/npm/perf-marks.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/perf-marks)
 [![NPM](https://nodei.co/npm-dl/perf-marks.png?height=3&months=3)](https://npmjs.org/perf-marks)
 
+![Perf marks](./images/perf-marks.png)
+
 The simplest and lightweight solution for [User Timing API](https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API) in Javascript. Simple how it should be.
 
 ## Contributing

@@ -10,3 +10,4 @@
 /.jest
 **/__tests__/
 /out-tsc
+/images
