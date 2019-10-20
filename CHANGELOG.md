@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Adding more info in `ISSUE_TEMPLATE.md`
+
 ### Added
 
 - Adding gif showing the package usage

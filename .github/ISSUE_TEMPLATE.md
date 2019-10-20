@@ -10,6 +10,10 @@ I thought that by going to the page '...' and do the action '...' then '...' wou
 
 Instead of '...', what I saw was that '...' happened instead.
 
-### Browsers affected
+### How to simulate the behaviour (if applicable)
 
-Please specify the affected browsers.
+This is the example of the current behaviour https://stackblitz.com/edit/perf-marks-playground
+
+### Browsers/OS/Platforms affected
+
+Please specify the affected browsers/OS/platforms.
