@@ -33,6 +33,7 @@
     "coveralls": "^3.0.7",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
@@ -79,9 +80,18 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "{scripts,src}/**/*.[tj]s": [
       "yarn lint:fix",
       "git add"
     ]
-  }
+  },
+  "browserslist": [
+    "last 1 chrome versions",
+    "last 1 edge versions",
+    "last 1 firefox versions",
+    "last 1 safari versions",
+    "last 1 and_chr versions",
+    "last 1 ios_saf versions",
+    "ie 11"
+  ]
 }

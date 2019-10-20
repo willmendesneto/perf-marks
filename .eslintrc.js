@@ -1,6 +1,17 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+    'plugin:compat/recommended',
+  ],
+  settings: {
+    // List of polyfills for `eslint-plugin-compat` check
+    // To know how to add in case you have a new one to add, please check
+    // https://github.com/amilajack/eslint-plugin-compat/wiki/Adding-polyfills-(v2)
+    polyfills: [],
+  },
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',

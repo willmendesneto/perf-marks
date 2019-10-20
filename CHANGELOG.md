@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Adding gif showing the package usage
+- Adding ESLint rule for polyfills
 
 ## [1.1.0][] - 2019-10-20
 
