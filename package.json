@@ -65,7 +65,7 @@
     "generate-banner": "node ./scripts/generate-banner.js",
     "bundlesize": "bundlesize",
     "lint": "eslint '{scripts,src}/**/*.[tj]s'",
-    "lint:fix": "eslint --fix '{scripts,src}/**/*.[tj]s'",
+    "lint:fix": "prettier --no-editorconfig --write",
     "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "bundlesize": [
@@ -80,8 +80,8 @@
     }
   },
   "lint-staged": {
-    "{scripts,src}/**/*.[tj]s": [
-      "yarn lint:fix",
+    "*.{js,ts}": [
+      "prettier --no-editorconfig --write",
       "git add"
     ]
   },
