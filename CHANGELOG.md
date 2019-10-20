@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Adding gif showing the package usage
+
 ## [1.1.0][] - 2019-10-20
 
 ### Updated
@@ -45,7 +49,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.0.0]: https://github.com/willmendesneto/perf-marks/tree/v1.0.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.0.1...HEAD
 [1.0.1]: https://github.com/willmendesneto/perf-marks/tree/v1.0.1
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.1.0...HEAD
 [1.1.0]: https://github.com/willmendesneto/perf-marks/tree/v1.1.0

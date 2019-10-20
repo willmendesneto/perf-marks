@@ -55,6 +55,8 @@ $ choco install nodejs.install -version 6.10.2
 
 Try out our [demo on Stackblitz](https://perf-marks-playground.stackblitz.io)!
 
+![Perf marks in action](./images/perf-marks-in-action.gif)
+
 ## Run the app
 
 ```bash
