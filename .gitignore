@@ -9,3 +9,5 @@ dist
 out-tsc/
 *.js
 *.d.ts
+!jest.*.js
+!scripts/*
