@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.2.1][] - 2019-10-22
+
 ### Fixed
 
 - Removing scripts and jest config from `.gitignore` file
@@ -72,3 +74,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.1.0]: https://github.com/willmendesneto/perf-marks/tree/v1.1.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.0...HEAD
 [1.2.0]: https://github.com/willmendesneto/perf-marks/tree/v1.2.0
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/willmendesneto/perf-marks/tree/v1.2.1
