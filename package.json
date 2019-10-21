@@ -8,8 +8,8 @@
     "url": "https://github.com/willmendesneto/perf-marks.git"
   },
   "license": "MIT",
-  "main": "lib/perf-marks.js",
-  "types": "lib/perf-marks.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
     "perf-marks",
     "performance",
