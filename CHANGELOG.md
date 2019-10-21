@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Adding gif showing the package usage
 - Adding ESLint rule for polyfills
+- Adding entrypoints: `perf-marks/marks` and `perf-marks/entries`
 
 ## [1.1.0][] - 2019-10-20
 

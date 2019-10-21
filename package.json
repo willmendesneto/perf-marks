@@ -8,8 +8,10 @@
     "url": "https://github.com/willmendesneto/perf-marks.git"
   },
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/es5/index.js",
+  "jsnext:main": "dist/es2015/index.js",
+  "module": "dist/es2015/index.js",
+  "types": "dist/es5/index.d.ts",
   "keywords": [
     "perf-marks",
     "performance",
@@ -21,7 +23,6 @@
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
-    "@babel/plugin-transform-modules-umd": "^7.2.0",
     "@babel/preset-env": "^7.6.3",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.0.10",
@@ -35,17 +36,17 @@
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "jsdom": "^15.2.0",
     "lint-staged": "^9.4.2",
-    "mustache": "^3.0.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.4.3",
     "typings": "^2.1.1",
-    "uglify-js": "^3.0.10",
     "usertiming": "^0.1.8",
     "version-changelog": "^3.1.0"
   },
@@ -54,8 +55,13 @@
   },
   "scripts": {
     "compile": "tsc",
-    "build": "yarn compile && babel lib --out-dir lib && yarn build-min && yarn generate-banner",
-    "build-min": "uglifyjs lib/perf-marks.js --comments '/!/' -m --screw-ie8=true -c unused=false -o lib/perf-marks.min.js",
+    "clean": "rm -rf ./dist ./.jest ./coverage ./lib ./marks.* ./entries.*",
+    "build": "npm run build:es2015 && npm run build:esm && npm run build:cjs",
+    "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
+    "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm && npm run build:entrypoints:clean && npm run build:entrypoints",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
+    "build:entrypoints:clean": "rm -rf ./dist/cjs/entrypoints ./dist/es2015/entrypoints",
+    "build:entrypoints": "node ./scripts/build-entrypoints.js",
     "test": "jest",
     "pretest:ci": "yarn lint",
     "test:ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
@@ -69,12 +75,16 @@
   },
   "bundlesize": [
     {
-      "path": "./lib/perf-marks.min.js",
-      "maxSize": "589B"
+      "path": "./dist/esm/index.js",
+      "maxSize": "89B"
     },
     {
-      "path": "./lib/index.js",
-      "maxSize": "460B"
+      "path": "./dist/es2015/index.js",
+      "maxSize": "89B"
+    },
+    {
+      "path": "./dist/cjs/index.js",
+      "maxSize": "178B"
     }
   ],
   "husky": {

@@ -1,6 +1,4 @@
 {
-  "moduleId": "PerfMarks",
-  "plugins": ["@babel/plugin-transform-modules-umd"],
   "presets": [
     [
       "@babel/preset-env",
