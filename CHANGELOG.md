@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Removed
+
+- Removing `package.js` for meteor modules
+
 ### Updated
 
 - Adding more info in `ISSUE_TEMPLATE.md`
