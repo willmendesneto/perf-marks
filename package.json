@@ -56,7 +56,6 @@
     "compile": "tsc",
     "build": "yarn compile && babel lib --out-dir lib && yarn build-min && yarn generate-banner",
     "build-min": "uglifyjs lib/perf-marks.js --comments '/!/' -m --screw-ie8=true -c unused=false -o lib/perf-marks.min.js",
-    "pretest": "yarn lint",
     "test": "jest",
     "pretest:ci": "yarn lint",
     "test:ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
@@ -72,6 +71,10 @@
     {
       "path": "./lib/perf-marks.min.js",
       "maxSize": "589B"
+    },
+    {
+      "path": "./lib/index.js",
+      "maxSize": "460B"
     }
   ],
   "husky": {

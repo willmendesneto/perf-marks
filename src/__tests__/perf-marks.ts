@@ -3,7 +3,6 @@ import * as PerfMarks from '../perf-marks';
 describe('PerfMarks: User timing API is available', () => {
   beforeEach(() => {
     spyOn(performance, 'mark');
-    // spyOn(performance, 'getEntriesByName').and.callThrough();
     spyOn(performance, 'clearMeasures');
     spyOn(performance, 'clearMarks');
   });

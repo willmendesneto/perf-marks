@@ -8,10 +8,10 @@ module.exports = {
   cacheDirectory: '<rootDir>/.jest',
   collectCoverage: true,
   roots: ['src'],
-  collectCoverageFrom: ['**/src/*.ts'],
+  collectCoverageFrom: ['**/src/*.ts', '!src/index.ts'],
   coverageThreshold: {
     global: {
-      branches: 87,
+      branches: 86,
       functions: 100,
       lines: 92,
       statements: 82,
@@ -19,6 +19,6 @@ module.exports = {
   },
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['/node_modules/', '/scripts/', '/dist/', '/src/index.[tj]s'],
+  testPathIgnorePatterns: ['/node_modules/', '/scripts/', '/dist/'],
   setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
 };
