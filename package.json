@@ -56,9 +56,9 @@
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf ./dist ./.jest ./coverage ./lib ./marks.* ./entries.*",
-    "build": "npm run build:es2015 && npm run build:esm && npm run build:cjs",
+    "build": "yarn build:es2015 && yarn build:cjs && yarn build:esm",
     "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
-    "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm && npm run build:entrypoints:clean && npm run build:entrypoints",
+    "build:esm": "tsc --module esnext --target esnext --outDir dist/esm && yarn build:entrypoints:clean && yarn build:entrypoints",
     "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
     "build:entrypoints:clean": "rm -rf ./dist/cjs/entrypoints ./dist/es2015/entrypoints",
     "build:entrypoints": "node ./scripts/build-entrypoints.js",
