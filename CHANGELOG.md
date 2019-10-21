@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Adding more info in `ISSUE_TEMPLATE.md`
+- Removing unnecessary files from npm pack
+- ignoring main `src/index.ts` entry file on code coverage
+- Adding `src/index.ts` entry file as main package route for resources
 
 ### Added
 
