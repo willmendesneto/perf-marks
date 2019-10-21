@@ -11,3 +11,9 @@
 **/__tests__/
 /out-tsc
 /images
+
+jest*.js
+tsconfig.*.json
+tsconfig.json
+.coveralls.yml
+.banner
