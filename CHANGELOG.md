@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- Fixing ignored files list
+
 ## [1.3.1][] - 2019-10-23
 
 ### Fixed
@@ -103,7 +107,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.2.1]: https://github.com/willmendesneto/perf-marks/tree/v1.2.1
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.3.0...HEAD
 [1.3.0]: https://github.com/willmendesneto/perf-marks/tree/v1.3.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.3.1...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.3.1...HEAD
 [1.3.1]: https://github.com/willmendesneto/perf-marks/tree/v1.3.1

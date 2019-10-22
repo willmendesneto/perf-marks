@@ -16,4 +16,8 @@ tsconfig.*.json
 tsconfig.json
 .coveralls.yml
 .banner
+package
 *.tgz
+
+# ignore OS generated files
+**/.DS_Store
