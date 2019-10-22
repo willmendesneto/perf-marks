@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- Adding `UMD` bundle as main entry for the package
+
+### Updated
+
+- Removing `tslib` for Stackblitz examples
+- Updated entrypoints logic to remove files after `yarn bundlesize` command
+
+### Added
+
+- Adding different bundles for `CommonJS`, `UMD`, `ESM` and `ES2015`
+- Using `ESM` definition for entry points for better tree shaking
+
 ## [1.2.1][] - 2019-10-22
 
 ### Fixed
@@ -74,7 +88,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.1.0]: https://github.com/willmendesneto/perf-marks/tree/v1.1.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.0...HEAD
 [1.2.0]: https://github.com/willmendesneto/perf-marks/tree/v1.2.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...HEAD
 [1.2.1]: https://github.com/willmendesneto/perf-marks/tree/v1.2.1

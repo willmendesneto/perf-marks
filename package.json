@@ -8,10 +8,11 @@
     "url": "https://github.com/willmendesneto/perf-marks.git"
   },
   "license": "MIT",
-  "main": "dist/es5/index.js",
+  "main": "dist/umd/index.js",
   "jsnext:main": "dist/es2015/index.js",
   "module": "dist/es2015/index.js",
-  "types": "dist/es5/index.d.ts",
+  "cjs": "dist/cjs/index.js",
+  "types": "dist/umd/index.d.ts",
   "keywords": [
     "perf-marks",
     "performance",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-modules-umd": "^7.2.0",
     "@babel/preset-env": "^7.6.3",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.0.10",
@@ -56,22 +58,21 @@
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf ./dist ./.jest ./coverage ./lib ./marks.* ./entries.*",
-    "build": "yarn build:es2015 && yarn build:cjs && yarn build:esm",
+    "clean:entrypoints": "rm -rf ./marks.* ./entries.*",
+    "build": "yarn build:es2015 && yarn build:cjs && yarn build:esm && yarn build:umd",
+    "build:umd": "tsc --module esnext --target ES5 --outDir dist/umd && babel dist/umd --out-dir dist/umd",
     "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
     "build:esm": "tsc --module esnext --target esnext --outDir dist/esm && yarn build:entrypoints:clean && yarn build:entrypoints",
     "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
-    "build:entrypoints:clean": "rm -rf ./dist/cjs/entrypoints ./dist/es2015/entrypoints",
+    "build:entrypoints:clean": "rm -rf ./dist/umd/entrypoints ./dist/cjs/entrypoints ./dist/es2015/entrypoints",
     "build:entrypoints": "node ./scripts/build-entrypoints.js",
     "test": "jest",
     "pretest:ci": "yarn lint",
     "test:ci": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "check-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
-    "prepublish": "yarn build",
-    "generate-banner": "node ./scripts/generate-banner.js",
-    "bundlesize": "bundlesize",
+    "bundlesize": "bundlesize && yarn clean:entrypoints",
     "lint": "eslint '{scripts,src}/**/*.[tj]s'",
-    "lint:fix": "prettier --no-editorconfig --write",
-    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
+    "lint:fix": "prettier --no-editorconfig --write"
   },
   "bundlesize": [
     {
@@ -85,6 +86,10 @@
     {
       "path": "./dist/cjs/index.js",
       "maxSize": "178B"
+    },
+    {
+      "path": "./dist/umd/index.js",
+      "maxSize": "305B"
     }
   ],
   "husky": {
