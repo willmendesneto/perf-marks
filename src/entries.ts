@@ -1,14 +1,33 @@
 import { isUserTimingAPISupported } from './is-user-timing-api-supported';
 
-const getEntriesByType = (entryName: string): PerformanceNavigationTiming[] => {
+/**
+ * Response type of `PerfMarks.getNavigationMarker()` and `Perf.getEntriesByType()` methods
+ *
+ */
+export type PerfMarksPerformanceNavigationTiming = PerformanceNavigationTiming | { [key: string]: any };
+
+/**
+ * Gets the result for all marks that matches with the given mark name
+ *
+ * @param markName - Performance marker to be checked
+ *
+ * @returns PerfMarksPerformanceNavigationTiming[]
+ *
+ */
+const getEntriesByType = (entryName: string): PerfMarksPerformanceNavigationTiming[] => {
   if (!isUserTimingAPISupported) {
     return [];
   }
 
-  return (performance.getEntriesByType(entryName) as PerformanceNavigationTiming[]) || [];
+  return (performance.getEntriesByType(entryName) as PerfMarksPerformanceNavigationTiming[]) || [];
 };
 
-const getNavigationMarker = (): PerformanceNavigationTiming | { [key: string]: any } =>
-  getEntriesByType('navigation').pop() || {};
+/**
+ * Gets the marks for `navigation` loaded mark
+ *
+ * @returns PerfMarksPerformanceNavigationTiming[]
+ *
+ */
+const getNavigationMarker = (): PerfMarksPerformanceNavigationTiming => getEntriesByType('navigation').pop() || {};
 
-export { getNavigationMarker };
+export { getNavigationMarker, getEntriesByType };
