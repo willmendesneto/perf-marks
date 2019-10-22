@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
+- Fixing ignored files list
+
+## [1.3.0][] - 2019-10-22
+
+### Fixed
+
 - Adding `UMD` bundle as main entry for the package
 
 ### Updated
@@ -93,3 +99,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.2.0]: https://github.com/willmendesneto/perf-marks/tree/v1.2.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.2.1...HEAD
 [1.2.1]: https://github.com/willmendesneto/perf-marks/tree/v1.2.1
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/willmendesneto/perf-marks/tree/v1.3.0

@@ -3,6 +3,7 @@ npm-debug.log
 .DS_Store
 node_modules
 coverage
+package
 .nyc_output
 dist
 .jest/
@@ -11,3 +12,4 @@ out-tsc/
 *.d.ts
 !jest.*.js
 !scripts/*
+*.tgz

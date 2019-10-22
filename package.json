@@ -72,7 +72,8 @@
     "check-coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage",
     "bundlesize": "bundlesize && yarn clean:entrypoints",
     "lint": "eslint '{scripts,src}/**/*.[tj]s'",
-    "lint:fix": "prettier --no-editorconfig --write"
+    "lint:fix": "prettier --no-editorconfig --write",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "bundlesize": [
     {
