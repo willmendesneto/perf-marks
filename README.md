@@ -32,7 +32,6 @@ Assuming that you are using `nvm`, please run the commands inside this folder:
 ```bash
 $ nvm install $(cat .nvmrc); # install required nodejs version
 $ nvm use $(cat .nvmrc); # use nodejs version
-$ npm install
 ```
 
 In Windows, please install NodeJS using one of these options:
@@ -42,13 +41,24 @@ Via `NVM Windows` package: Dowload via [this link](https://github.com/coreybutle
 ```bash
 $ nvm install $(cat .nvmrc); # install required nodejs version
 $ nvm use $(cat .nvmrc); # use nodejs version
-$ npm install
 ```
 
 Via Chocolatey:
 
 ```bash
 $ choco install nodejs.install -version 6.10.2
+```
+
+### Install yarn
+
+We use `yarn` as our package manager instead of `npm`
+
+[Install it following these steps](https://yarnpkg.com/lang/en/docs/install/#mac-tab)
+
+After that, just navigate to your local repository and run
+
+```bash
+$ yarn install
 ```
 
 ## Demo
@@ -60,19 +70,19 @@ Try out our [demo on Stackblitz](https://perf-marks-playground.stackblitz.io)!
 ## Run the app
 
 ```bash
-$ npm start
+$ yarn start
 ```
 
 ## Run the tests
 
 ```bash
-$ npm test # run the tests
+$ yarn test # run the tests
 ```
 
 ## Run the build
 
 ```bash
-$ npm run build # run the tests
+$ yarn build # run the tests
 ```
 
 ## `PerfMarks`
@@ -83,17 +93,115 @@ This service exposes a few different methods with which you can interact with fe
 
 Adds the user timing api marker instrumentation in your application.
 
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+...
+```
+
 ### `PerfMarks.end(markName)`
 
 Returns the results for the specified marker
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+...
+const markResults: PerfMarks.PerfMarksPerformanceEntry = PerfMarks.end('name-of-your-mark');
+```
 
 ### `PerfMarks.clear(markName)`
 
 Removes the specified marker
 
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+...
+PerfMarks.clear('name-of-your-mark');
+...
+```
+
 ### `PerfMarks.clearAll()`
 
 Removes all the marker
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+...
+PerfMarks.clearAll();
+...
+```
+
+### `PerfMarks.getNavigationMarker()`
+
+Gets the marks for `navigation` loaded
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+const markResults: PerfMarksPerformanceNavigationTiming = PerfMarks.getNavigationMarker();
+...
+```
+
+### `PerfMarks.getEntriesByType(markName)`
+
+Gets the result for all marks that matches with the given mark name
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+PerfMarks.start('another-name-of-your-mark');
+...
+// It will return results for all the marks that matches with `name-of-your-mark`
+// In this case, `name-of-your-mark` and `another-name-of-your-mark`
+const markResult: PerfMarksPerformanceNavigationTiming[] = PerfMarks.getEntriesByType('name-of-your-mark');
+...
+```
+
+### `PerfMarks.isUserTimingAPISupported`
+
+Boolean with the result of the check if User Timing API is supported for the current browser/NodeJS version
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+PerfMarks.start('another-name-of-your-mark');
+...
+// It will return results for all the marks that matches with `name-of-your-mark`
+// In this case, `name-of-your-mark` and `another-name-of-your-mark`
+const markResult: PerfMarksPerformanceNavigationTiming[] = PerfMarks.getEntriesByType('name-of-your-mark');
+...
+```
+
+## Entrypoints
+
+These are entrypoints for specific components to be used carefully by the consumers. If you're using one of these entrypoints we are assuming you know what you are doing. So it means that code-splitting and tree-shaking should be done on the consumer/product side.
+
+### Exposed entrypoints
+
+- `perf-marks/marks`: it has all the methods for marks
+  - `start`
+  - `end`
+  - `clear`
+  - `clearAll`
+- `perf-marks/entries`: it has all the methods to get entries
+  - `getNavigationMarker`
+  - `getEntriesByType`
 
 ## Publish
 
