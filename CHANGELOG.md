@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Adding different bundles for `CommonJS`, `UMD`, `ESM` and `ES2015`
 - Using `ESM` definition for entry points for better tree shaking
+- Exposing new methods in entry points
+- Adding docs for entry points
+- Adding docs yarn usage and installation
 
 ## [1.2.1][] - 2019-10-22
 
