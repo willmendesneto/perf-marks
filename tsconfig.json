@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "downlevelIteration": true,
+    // https://github.com/angular/angular-cli/issues/13886#issuecomment-471927518
     "importHelpers": true,
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,

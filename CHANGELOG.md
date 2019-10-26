@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fixing ignored files list
 
+### Updated
+
+- Updating UMD id for package
+
+### Added
+
+- Adding `tslib` for CJS bundle version
+
 ## [1.3.1][] - 2019-10-23
 
 ### Fixed
