@@ -203,6 +203,67 @@ These are entrypoints for specific components to be used carefully by the consum
   - `getNavigationMarker`
   - `getEntriesByType`
 
+If you need optimize your bundle size even more, this package provides different bundles for `CommonJS`, `UMD`, `ESM` and `ES2015`. To make the dev experience smoothiest as possible, you can use `babel-plugin-transform-imports` in your app and configure the bundle that fits the most for your app!
+
+```bash
+yarn add -D babel-plugin-transform-imports
+# or
+npm install --save-dev babel-plugin-transform-imports
+```
+
+Create a `.babelrc.js` file in the root directory of your project:
+
+```js
+const plugins = [
+  [
+    'babel-plugin-transform-imports',
+    {
+      'perf-marks/perf-marks': {
+        // Use "transform: 'perf-marks/perf-marks/${member}'," if your bundler does not support ES modules
+        transform: 'perf-marks/dist/esm/${member}',
+        preventFullImport: true,
+      },
+      'perf-marks/entries': {
+        // Use "transform: 'perf-marks/entries/${member}'," if your bundler does not support ES modules
+        transform: 'perf-marks/entries/esm/${member}',
+        preventFullImport: true,
+      },
+    },
+  ],
+];
+
+module.exports = { plugins };
+```
+
+Or just use it via `babel-plugin-import`
+
+```bash
+yarn add -D babel-plugin-import
+# or
+npm install --save-dev babel-plugin-import
+```
+
+Create a `.babelrc.js` file in the root directory of your project:
+
+```js
+const plugins = [
+  [
+    'babel-plugin-import',
+    {
+      libraryName: 'perf-marks/entries',
+      // Use "'libraryDirectory': ''," if your bundler does not support ES modules
+      libraryDirectory: 'esm',
+      camel2DashComponentName: false,
+    },
+    'entries',
+  ],
+];
+
+module.exports = { plugins };
+```
+
+And enjoy! Yeah, it's simple like that 😉
+
 ## Publish
 
 this project is using `np` package to publish, which makes things straightforward. EX: `np <patch|minor|major>`
