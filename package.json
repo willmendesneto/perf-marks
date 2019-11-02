@@ -92,7 +92,7 @@
     },
     {
       "path": "./dist/umd/index.js",
-      "maxSize": "305B"
+      "maxSize": "455B"
     }
   ],
   "husky": {
