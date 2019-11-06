@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Updated `main` entry point in `package.json` to point to `cjs` bundle content
+
 ### Fixed
 
 - Updated bundle size for UMD module
