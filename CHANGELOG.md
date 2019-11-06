@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.5.0][] - 2019-11-06
+
 ### Added
 
 - Adding `sideEffects: false` to allow consumer's to tree-shake
@@ -138,3 +140,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.4.0]: https://github.com/willmendesneto/perf-marks/tree/v1.4.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.4.1...HEAD
 [1.4.1]: https://github.com/willmendesneto/perf-marks/tree/v1.4.1
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/willmendesneto/perf-marks/tree/v1.5.0
