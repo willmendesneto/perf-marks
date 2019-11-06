@@ -14,10 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Updated `main` entry point in `package.json` to point to `cjs` bundle content
-
-### Fixed
-
-- Updated bundle size for UMD module
+- Updated UMD bundle module to use `browser` key
 
 ## [1.4.1][] - 2019-10-26
 
