@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Adding `sideEffects: false` to allow consumer's to tree-shake
+
 ### Updated
 
 - Updated `main` entry point in `package.json` to point to `cjs` bundle content
