@@ -1,6 +1,6 @@
 {
   "name": "perf-marks",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "author": "Will Mendes <willmendesneto@gmail.com>",
   "description": "The simplest and lightweight solution for User Timing API in Javascript.",
   "repository": {

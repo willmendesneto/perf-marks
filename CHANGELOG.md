@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.5.1][] - 2019-11-08
+
 ### Updated
 
 - Updated UMD bundle module to use `rollup` as UMD resolver
@@ -146,3 +148,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.4.1]: https://github.com/willmendesneto/perf-marks/tree/v1.4.1
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.5.0...HEAD
 [1.5.0]: https://github.com/willmendesneto/perf-marks/tree/v1.5.0
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.5.1...HEAD
+[1.5.1]: https://github.com/willmendesneto/perf-marks/tree/v1.5.1
