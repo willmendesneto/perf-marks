@@ -9,7 +9,7 @@
   },
   "sideEffects": false,
   "license": "MIT",
-  "browser": "dist/umd/index.js",
+  "browser": "dist/umd/perf-marks.js",
   "jsnext:main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "main": "dist/cjs/index.js",
@@ -50,10 +50,12 @@
     "jsdom": "^15.2.0",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
+    "rollup": "^1.26.3",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
     "typescript": "^3.4.3",
     "typings": "^2.1.1",
+    "uglifyjs": "^2.4.11",
     "usertiming": "^0.1.8",
     "version-changelog": "^3.1.0"
   },
@@ -65,7 +67,8 @@
     "clean": "rm -rf ./dist ./.jest ./coverage ./lib ./marks.* ./entries.*",
     "clean:entrypoints": "rm -rf ./marks.* ./entries.*",
     "build": "yarn build:es2015 && yarn build:cjs && yarn build:esm && yarn build:umd && yarn build:entrypoints:clean && yarn build:entrypoints",
-    "build:umd": "tsc --module esnext --target es5 --outDir dist/umd && babel dist/umd --out-dir dist/umd",
+    "build:umd": "rollup dist/esm/index.js --format umd --name PerfMarks -o dist/umd/perf-marks.js && yarn build:umd:min",
+    "build:umd:min": "uglifyjs --compress --mangle --screw-ie8 --comments -o dist/umd/perf-marks.min.js -- dist/umd/perf-marks.js && gzip dist/umd/perf-marks.min.js -c > dist/umd/perf-marks.min.js.gz",
     "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
     "build:esm": "tsc --module esnext --target es5 --outDir dist/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
@@ -94,8 +97,12 @@
       "maxSize": "178B"
     },
     {
-      "path": "./dist/umd/index.js",
-      "maxSize": "455B"
+      "path": "./dist/umd/perf-marks.js",
+      "maxSize": "1.21KB"
+    },
+    {
+      "path": "./dist/umd/perf-marks.min.js",
+      "maxSize": "530B"
     }
   ],
   "husky": {
