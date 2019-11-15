@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.6.0][] - 2019-11-14
+
 ### Updated
 
 - Adding support for CJS and ESM in entry points via build tool. By definition it will use CJS. However, this can be changed in the consumer's bundle step - built-in scenario if the consumer uses toolings such as `Webpack`, `Rollup`, or `Parcel`.
@@ -155,3 +157,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.5.0]: https://github.com/willmendesneto/perf-marks/tree/v1.5.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.5.1...HEAD
 [1.5.1]: https://github.com/willmendesneto/perf-marks/tree/v1.5.1
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/willmendesneto/perf-marks/tree/v1.6.0
