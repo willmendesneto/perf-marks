@@ -1,0 +1,6 @@
+{
+  "name": "perf-marks/entries",
+  "private": true,
+  "main": "../dist/cjs/entries.js",
+  "module": "../dist/esm/entries.js"
+}

@@ -112,4 +112,4 @@ const clearAll = (): void => {
   performance.clearMarks();
 };
 
-export { start, end, clear, clearAll };
+export { start, end, clear, clearAll, isUserTimingAPISupported };

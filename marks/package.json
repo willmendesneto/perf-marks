@@ -1,0 +1,6 @@
+{
+  "name": "perf-marks/marks",
+  "private": true,
+  "main": "../dist/cjs/marks.js",
+  "module": "../dist/esm/marks.js"
+}

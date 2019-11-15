@@ -1,4 +1,4 @@
-import * as PerfMarks from '../perf-marks';
+import * as PerfMarks from '../marks';
 
 describe('PerfMarks: User timing API is available', () => {
   beforeEach(() => {

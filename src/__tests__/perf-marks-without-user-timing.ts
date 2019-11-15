@@ -2,7 +2,7 @@ jest.doMock('../is-user-timing-api-supported', () => ({
   isUserTimingAPISupported: false,
 }));
 
-import * as PerfMarks from '../perf-marks';
+import * as PerfMarks from '../marks';
 
 describe('PerfMarks: User timing API is NOT available', () => {
   beforeEach(() => {

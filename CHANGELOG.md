@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
 
+- Adding support for CJS and ESM in entry points via build tool. By definition it will use CJS. However, this can be changed in the consumer's bundle step - built-in scenario if the consumer uses toolings such as `Webpack`, `Rollup`, or `Parcel`.
 - Removing `babel` packages from dependencies. Not needed anymore after move to `rollup` build
 
 ## [1.5.1][] - 2019-11-08
