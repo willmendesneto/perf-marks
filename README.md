@@ -67,22 +67,28 @@ Try out our [demo on Stackblitz](https://perf-marks-playground.stackblitz.io)!
 
 ![Perf marks in action](./images/perf-marks-in-action.gif)
 
-## Run the app
-
-```bash
-$ yarn start
-```
-
-## Run the tests
+### Run the tests
 
 ```bash
 $ yarn test # run the tests
 ```
 
-## Run the build
+### Run the build
 
 ```bash
 $ yarn build # run the tests
+```
+
+### Run the bundlesize check
+
+```bash
+$ yarn bundlesize # run the tests
+```
+
+### Run the code lint
+
+```bash
+$ yarn lint # run the tests
 ```
 
 ## `PerfMarks`
@@ -103,7 +109,9 @@ PerfMarks.start('name-of-your-mark');
 
 ### `PerfMarks.end(markName)`
 
-Returns the results for the specified marker
+Returns the results for the specified marker.
+
+> `PerfMarks.end(markName)` calls `PerfMarks.clear(markName)` after return the mark values
 
 ```js
 import * as PerfMarks from 'perf-marks';
@@ -137,6 +145,7 @@ import * as PerfMarks from 'perf-marks';
 
 ...
 PerfMarks.start('name-of-your-mark');
+PerfMarks.start('another-name-of-your-mark');
 ...
 PerfMarks.clearAll();
 ...
@@ -173,24 +182,25 @@ const markResult: PerfMarksPerformanceNavigationTiming[] = PerfMarks.getEntriesB
 
 ### `PerfMarks.isUserTimingAPISupported`
 
-Boolean with the result of the check if User Timing API is supported for the current browser/NodeJS version
+Boolean with the result of the check if User Timing API is supported for the current browser/NodeJS version.
+
+> `PerfMarks` already have a fallback in case user timing is not supported. This boolean is exposed in case the app needs to check the case to use any other mechanism.
 
 ```js
 import * as PerfMarks from 'perf-marks';
 
 ...
-PerfMarks.start('name-of-your-mark');
-PerfMarks.start('another-name-of-your-mark');
-...
-// It will return results for all the marks that matches with `name-of-your-mark`
-// In this case, `name-of-your-mark` and `another-name-of-your-mark`
-const markResult: PerfMarksPerformanceNavigationTiming[] = PerfMarks.getEntriesByType('name-of-your-mark');
+if (PerfMarks.isUserTimingAPISupported) {
+  // ... Do something
+}
 ...
 ```
 
 ## Entrypoints
 
 These are entrypoints for specific components to be used carefully by the consumers. If you're using one of these entrypoints we are assuming you know what you are doing. So it means that code-splitting and tree-shaking should be done on the consumer/product side.
+
+By definition it will use CJS as the main distribution entrypoint used in the app. However, this can be changed in the consumer's bundle step. This is the built-in scenario if the consumer uses toolings such as `Webpack`, `Rollup`, or `Parcel`.
 
 ### Exposed entrypoints
 
@@ -199,6 +209,7 @@ These are entrypoints for specific components to be used carefully by the consum
   - `end`
   - `clear`
   - `clearAll`
+  - `isUserTimingAPISupported`
 - `perf-marks/entries`: it has all the methods to get entries
   - `getNavigationMarker`
   - `getEntriesByType`

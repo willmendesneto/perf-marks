@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Updating `README.md` docs with latest changes
+
 ## [1.6.0][] - 2019-11-14
 
 ### Updated
@@ -157,7 +161,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 [1.5.0]: https://github.com/willmendesneto/perf-marks/tree/v1.5.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.5.1...HEAD
 [1.5.1]: https://github.com/willmendesneto/perf-marks/tree/v1.5.1
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.6.0...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.6.0...HEAD
 [1.6.0]: https://github.com/willmendesneto/perf-marks/tree/v1.6.0
