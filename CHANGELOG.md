@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Updating `README.md` docs with latest changes
+- Decreasing bundle size of the package to `176B` 🎉
+- Updating NodeJS Version to 12.14.1
 
 ## [1.6.0][] - 2019-11-14
 

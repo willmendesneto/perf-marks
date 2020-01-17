@@ -14,7 +14,7 @@ const getTimeNow = (): number => {
     return performance.now();
   }
 
-  return Date.now ? Date.now() : +new Date();
+  return Date.now();
 };
 
 /**
@@ -77,11 +77,7 @@ const end = (markName: string, markNameToCompare?: string): PerfMarksPerformance
     performance.measure(markName, markName, markNameToCompare || undefined);
     const entry: PerformanceEntry | undefined = performance.getEntriesByName(markName).pop();
 
-    if (entry) {
-      return entry;
-    }
-
-    return {};
+    return entry || {};
   } catch (e) {
     // If previous mark was missing for some reason, this will throw.
     // This could only happen if something in event loop crashed
