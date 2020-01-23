@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Updating jsdom to v16
+- Updating lint-staged to v10.0.2
 
 ## [1.7.0][] - 2020-01-18
 
