@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updating jsdom to v16
 - Updating lint-staged to v10.0.2
 
+### Fixed
+
+- Migrating from `uglifyjs` to `uglify-js` due to package deprecation
+
 ## [1.7.0][] - 2020-01-18
 
 ### Updated

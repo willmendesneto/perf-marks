@@ -50,7 +50,7 @@
     "ts-node": "^8.4.1",
     "typescript": "^3.4.3",
     "typings": "^2.1.1",
-    "uglifyjs": "^2.4.11",
+    "uglify-js": "^3.7.6",
     "usertiming": "^0.1.8",
     "version-changelog": "^3.1.0"
   },
