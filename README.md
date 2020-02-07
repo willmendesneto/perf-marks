@@ -15,7 +15,12 @@
 
 ![Perf marks](./images/perf-marks.png)
 
-The simplest and lightweight solution for [User Timing API](https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API) in Javascript. Simple how it should be.
+
+### Why perf-marks?
+
+That's the simplest and lightweight solution for [User Timing API](https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API) in Javascript. Simple how it should be.
+
+You can find more details about it in the slides "[User Timing API: because performance matters](http://bit.ly/user-timing-api-because-perf-matters)"
 
 ## Contributing
 
