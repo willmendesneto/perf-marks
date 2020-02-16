@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.8.0][] - 2020-02-16
+
 ### Added
 
 - Adding new `isPerformanceObservableSupported` boolean for check if `PerformanceObservable` is supported for the current browser/NodeJS version
@@ -205,3 +207,7 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.6.0]: https://github.com/willmendesneto/perf-marks/tree/v1.6.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.7.0...HEAD
 [1.7.0]: https://github.com/willmendesneto/perf-marks/tree/v1.7.0
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.8.0...HEAD
+[1.8.0]: https://github.com/willmendesneto/perf-marks/tree/v1.8.0
