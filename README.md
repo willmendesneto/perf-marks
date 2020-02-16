@@ -15,7 +15,6 @@
 
 ![Perf marks](./images/perf-marks.png)
 
-
 ### Why perf-marks?
 
 That's the simplest and lightweight solution for [User Timing API](https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API) in Javascript. Simple how it should be.
@@ -201,6 +200,34 @@ if (PerfMarks.isUserTimingAPISupported) {
 ...
 ```
 
+### `PerfMarks.isPerformanceObservableSupported`
+
+Boolean with the result of the check if PerformanceObservable is supported for the current browser/NodeJS version.
+
+> `PerfMarks` does not provide a fallback if `PerformanceObservable` is not supported. This boolean is exposed in case the app needs to check the case to use any other mechanism.
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+// Checking if `PerformanceObservable` is supported for the current browser/NodeJS version
+if (PerfMarks.isPerformanceObservableSupported) {
+  try {
+  // If yes, start the PerformanceObserver
+    const observer: PerformanceObserver = new PerformanceObserver(list => {
+      // ... Do something
+    });
+
+    // register observer based on the entryTypes
+    // E.G. for long task notifications
+    observer.observe({ entryTypes: ['longtask'] });
+  } catch (e) {}
+  // ... Finishing the observer
+  observer.disconnect();
+}
+...
+```
+
 ## Entrypoints
 
 These are entrypoints for specific components to be used carefully by the consumers. If you're using one of these entrypoints we are assuming you know what you are doing. So it means that code-splitting and tree-shaking should be done on the consumer/product side.
@@ -215,6 +242,7 @@ By definition it will use CJS as the main distribution entrypoint used in the ap
   - `clear`
   - `clearAll`
   - `isUserTimingAPISupported`
+  - `isPerformanceObservableSupported`
 - `perf-marks/entries`: it has all the methods to get entries
   - `getNavigationMarker`
   - `getEntriesByType`

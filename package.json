@@ -78,23 +78,23 @@
   "bundlesize": [
     {
       "path": "./dist/esm/index.js",
-      "maxSize": "84B"
+      "maxSize": "104B"
     },
     {
       "path": "./dist/es2015/index.js",
-      "maxSize": "84B"
+      "maxSize": "104B"
     },
     {
       "path": "./dist/cjs/index.js",
-      "maxSize": "176B"
+      "maxSize": "193B"
     },
     {
       "path": "./dist/umd/perf-marks.js",
-      "maxSize": "1.19KB"
+      "maxSize": "1.24KB"
     },
     {
       "path": "./dist/umd/perf-marks.min.js",
-      "maxSize": "508B"
+      "maxSize": "554B"
     }
   ],
   "husky": {

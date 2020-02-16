@@ -1,4 +1,5 @@
 import { isUserTimingAPISupported } from './is-user-timing-api-supported';
+import { isPerformanceObservableSupported } from './is-performance-observable-supported';
 
 // Map() is not used in order to decrease the bundle
 let marksMap: { [key: string]: number | undefined } = {};
@@ -108,4 +109,4 @@ const clearAll = (): void => {
   performance.clearMarks();
 };
 
-export { start, end, clear, clearAll, isUserTimingAPISupported };
+export { start, end, clear, clearAll, isUserTimingAPISupported, isPerformanceObservableSupported };

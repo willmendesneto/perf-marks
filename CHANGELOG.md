@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Adding new `isPerformanceObservableSupported` boolean for check if `PerformanceObservable` is supported for the current browser/NodeJS version
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+// Checking if `PerformanceObservable` is supported for the current browser/NodeJS version
+if (PerfMarks.isPerformanceObservableSupported) {
+  try {
+  // If yes, start the PerformanceObserver
+    const observer: PerformanceObserver = new PerformanceObserver(list => {
+      // ... Do something
+    });
+
+    // register observer based on the entryTypes
+    // E.G. for long task notifications
+    observer.observe({ entryTypes: ['longtask'] });
+  } catch (e) {}
+  // ... Finishing the observer
+  observer.disconnect();
+}
+...
+```
+
 ### Updated
 
 - Updating jsdom to v16

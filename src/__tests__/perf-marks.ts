@@ -1,7 +1,13 @@
+jest.doMock('../is-performance-observable-supported', () => ({
+  isPerformanceObservableSupported: true,
+}));
+
 import * as PerfMarks from '../marks';
 
 describe('PerfMarks: User timing API is available', () => {
   beforeEach(() => {
+    spyOn(Date, 'now').and.callThrough();
+    spyOn(performance, 'now').and.callThrough();
     spyOn(performance, 'mark');
     spyOn(performance, 'clearMeasures');
     spyOn(performance, 'clearMarks');
@@ -17,6 +23,8 @@ describe('PerfMarks: User timing API is available', () => {
 
     PerfMarks.start(mark);
     expect(performance.mark).toHaveBeenCalledWith(mark);
+    expect(performance.now).toHaveBeenCalled();
+    expect(Date.now).not.toHaveBeenCalled();
   });
 
   it('should remove markers and measures if `clear` is called', () => {
@@ -92,5 +100,9 @@ describe('PerfMarks: User timing API is available', () => {
     const result = PerfMarks.end('this-mark-does-not-exist');
 
     expect(result).toEqual({});
+  });
+
+  it('should return `isPerformanceObservableSupported` value as `true` if PerformanceObservable API is available', () => {
+    expect(PerfMarks.isPerformanceObservableSupported).toBeTruthy();
   });
 });
