@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Updating jsdom to v16
 - Updating lint-staged to v10.0.2
+- Updating dev dependencies
 
 ### Fixed
 
