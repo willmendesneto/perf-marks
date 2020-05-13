@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Upgrading devDependencies to the latest version
+- Upgrading `tslib` to `v1.12.0`
+- Upgrading `nodejs` to `v12.16.2`
+- Upgrading `engines` in `package.json` to accept NodeJS versions only greater or equal than `>=12`
+
 ## [1.8.0][] - 2020-02-16
 
 ### Added
@@ -207,7 +214,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.6.0]: https://github.com/willmendesneto/perf-marks/tree/v1.6.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.7.0...HEAD
 [1.7.0]: https://github.com/willmendesneto/perf-marks/tree/v1.7.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.8.0...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.8.0...HEAD
 [1.8.0]: https://github.com/willmendesneto/perf-marks/tree/v1.8.0
