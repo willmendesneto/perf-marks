@@ -1,13 +1,18 @@
+jest.doMock('../is-nodejs-env', () => ({
+  isNodeJSEnv: false,
+}));
+
 jest.doMock('../is-performance-observable-supported', () => ({
   isPerformanceObservableSupported: true,
 }));
 
-import * as PerfMarks from '../marks';
+import * as PerfMarks from '../entrypoints/marks';
 
 describe('PerfMarks: User timing API is available', () => {
   beforeEach(() => {
     spyOn(Date, 'now').and.callThrough();
     spyOn(performance, 'now').and.callThrough();
+    spyOn(performance, 'measure');
     spyOn(performance, 'mark');
     spyOn(performance, 'clearMeasures');
     spyOn(performance, 'clearMarks');
@@ -49,7 +54,6 @@ describe('PerfMarks: User timing API is available', () => {
   });
 
   it('should return user timing information if user finishes mark', () => {
-    spyOn(performance, 'measure');
     jest.spyOn(performance, 'getEntriesByName').mockImplementation(() => [
       {
         duration: 1,

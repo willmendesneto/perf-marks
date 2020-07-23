@@ -2,7 +2,7 @@ jest.doMock('../is-user-timing-api-supported', () => ({
   isUserTimingAPISupported: false,
 }));
 
-import { getNavigationMarker } from '../entries';
+import { getNavigationMarker } from '../entrypoints/entries';
 
 describe('PerfMarks navigation: User timing API NOT is available', () => {
   beforeEach(() => {

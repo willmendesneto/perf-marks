@@ -1,4 +1,8 @@
-import { getNavigationMarker } from '../entries';
+jest.doMock('../is-nodejs-env', () => ({
+  isNodeJSEnv: false,
+}));
+
+import { getNavigationMarker } from '../entrypoints/entries';
 
 describe('PerfMarks navigation: User timing API is available', () => {
   afterEach(() => {

@@ -5,7 +5,7 @@ jest.doMock('../is-performance-observable-supported', () => ({
   isPerformanceObservableSupported: false,
 }));
 
-import * as PerfMarks from '../marks';
+import * as PerfMarks from '../entrypoints/marks';
 
 describe('PerfMarks: User timing API is NOT available', () => {
   beforeEach(() => {

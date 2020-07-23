@@ -1,5 +1,6 @@
 import { isUserTimingAPISupported } from './is-user-timing-api-supported';
 import { isPerformanceObservableSupported } from './is-performance-observable-supported';
+import { isNodeJSEnv } from './is-nodejs-env';
 
 // Map() is not used in order to decrease the bundle
 let marksMap: { [key: string]: number | undefined } = {};
@@ -33,7 +34,10 @@ const clear = (markName: string): void => {
     return;
   }
 
-  performance.clearMeasures(markName);
+  // Some versions of NodeJS doesn't support this method
+  if (!isNodeJSEnv) {
+    performance.clearMeasures(markName);
+  }
   performance.clearMarks(markName);
 };
 
@@ -56,7 +60,9 @@ const start = (markName: string): void => {
  * Response type of `PerfMarks.end()` method
  *
  */
-export type PerfMarksPerformanceEntry = PerformanceEntry | { duration?: number; startTime?: number };
+export type PerfMarksPerformanceEntry =
+  | PerformanceEntry
+  | { duration?: number; startTime?: number; name?: string; entryType?: string };
 
 /**
  * Finishes performance measure of event and
@@ -71,8 +77,11 @@ export type PerfMarksPerformanceEntry = PerformanceEntry | { duration?: number; 
 const end = (markName: string, markNameToCompare?: string): PerfMarksPerformanceEntry => {
   try {
     const startTime = marksMap[markName];
-    if (!isUserTimingAPISupported) {
-      return startTime ? { duration: getTimeNow() - startTime, startTime } : {};
+    // NodeJS is not using performance api directly from them for now
+    if (!isUserTimingAPISupported || isNodeJSEnv) {
+      return startTime
+        ? ({ duration: getTimeNow() - startTime, startTime, entryType: 'measure', name: markName } as PerformanceEntry)
+        : {};
     }
 
     performance.measure(markName, markName, markNameToCompare || undefined);
@@ -105,7 +114,10 @@ const clearAll = (): void => {
     return;
   }
 
-  performance.clearMeasures();
+  // Some versions of NodeJS doesn't support this method
+  if (!isNodeJSEnv) {
+    performance.clearMeasures();
+  }
   performance.clearMarks();
 };
 

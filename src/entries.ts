@@ -1,4 +1,5 @@
 import { isUserTimingAPISupported } from './is-user-timing-api-supported';
+import { isNodeJSEnv } from './is-nodejs-env';
 
 /**
  * Response type of `PerfMarks.getNavigationMarker()` and `Perf.getEntriesByType()` methods
@@ -15,7 +16,8 @@ export type PerfMarksPerformanceNavigationTiming = PerformanceNavigationTiming |
  *
  */
 const getEntriesByType = (entryName: string): PerfMarksPerformanceNavigationTiming[] => {
-  if (!isUserTimingAPISupported) {
+  // NodeJS doesn't have support for getEntriesByType
+  if (!isUserTimingAPISupported || isNodeJSEnv) {
     return [];
   }
 

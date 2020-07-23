@@ -9,8 +9,7 @@ const isUserTimingAPISupported =
   typeof performance !== 'undefined' &&
   typeof performance.now !== 'undefined' &&
   typeof performance.mark === 'function' &&
-  typeof performance.clearMarks === 'function' &&
   typeof performance.measure === 'function' &&
-  typeof performance.clearMeasures === 'function';
+  (typeof performance.clearMarks === 'function' || typeof performance.clearMeasures === 'function');
 
 export { isUserTimingAPISupported };

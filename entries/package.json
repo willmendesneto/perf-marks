@@ -1,6 +1,6 @@
 {
   "name": "perf-marks/entries",
   "private": true,
-  "main": "../dist/cjs/entries.js",
-  "module": "../dist/esm/entries.js"
+  "main": "../dist/cjs/entrypoints/entries.js",
+  "module": "../dist/esm/entrypoints/entries.js"
 }
