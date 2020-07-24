@@ -15,7 +15,7 @@
   "main": "dist/cjs/index.js",
   "es2015": "dist/cjs/index.js",
   "cjs": "dist/cjs/index.js",
-  "types": "dist/umd/index.d.ts",
+  "types": "dist/cjs/index.d.ts",
   "keywords": [
     "perf-marks",
     "performance",
