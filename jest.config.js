@@ -11,10 +11,10 @@ module.exports = {
   collectCoverageFrom: ['**/src/*.ts', '!src/index.ts', '!src/user-timing-api-resolver.ts'],
   coverageThreshold: {
     global: {
-      branches: 79,
-      functions: 88,
-      lines: 96,
-      statements: 96,
+      branches: 75,
+      functions: 72,
+      lines: 87,
+      statements: 87,
     },
   },
   preset: 'ts-jest',

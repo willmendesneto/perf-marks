@@ -90,11 +90,11 @@
     },
     {
       "path": "./dist/umd/perf-marks.js",
-      "maxSize": "1.56KB"
+      "maxSize": "1.80KB"
     },
     {
       "path": "./dist/umd/perf-marks.min.js",
-      "maxSize": "698B"
+      "maxSize": "793B"
     }
   ],
   "husky": {

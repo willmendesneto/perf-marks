@@ -12,6 +12,7 @@ describe('PerfMarks: User timing API is NOT available', () => {
     spyOn(Date, 'now').and.callThrough();
     spyOn(performance, 'now').and.callThrough();
     spyOn(performance, 'mark');
+    spyOn(performance, 'measure');
     spyOn(performance, 'clearMeasures');
     spyOn(performance, 'clearMarks');
   });

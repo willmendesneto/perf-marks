@@ -4,6 +4,7 @@ import { isNodeJSEnv } from './is-nodejs-env';
 
 // Map() is not used in order to decrease the bundle
 let marksMap: { [key: string]: number | undefined } = {};
+let marksObserver: { [key: string]: PerfMarksPerformanceEntry | undefined } = {};
 
 /**
  * Get the current time based on User Timing API or Date
@@ -30,6 +31,11 @@ const getTimeNow = (): number => {
 const clear = (markName: string): void => {
   marksMap[markName] = undefined;
 
+  // Removes PerformanceObserver references from memory
+  if (marksObserver[markName]) {
+    marksObserver[markName] = undefined;
+  }
+
   if (!isUserTimingAPISupported) {
     return;
   }
@@ -51,6 +57,14 @@ const clear = (markName: string): void => {
  */
 const start = (markName: string): void => {
   if (isUserTimingAPISupported) {
+    if (isNodeJSEnv && isPerformanceObservableSupported) {
+      // eslint-disable-next-line compat/compat
+      const obs = new PerformanceObserver(list => {
+        marksObserver[markName] = list.getEntries().find(f => f.name === markName);
+        obs.disconnect();
+      });
+      obs.observe({ entryTypes: ['measure'] });
+    }
     performance.mark(markName);
   }
   marksMap[markName] = getTimeNow();
@@ -77,8 +91,15 @@ export type PerfMarksPerformanceEntry =
 const end = (markName: string, markNameToCompare?: string): PerfMarksPerformanceEntry => {
   try {
     const startTime = marksMap[markName];
+
     // NodeJS is not using performance api directly from them for now
     if (!isUserTimingAPISupported || isNodeJSEnv) {
+      // `performance.measure()` behaves diferently between frontend and
+      // backend in Javascript applications. Using based on NodeJS docs
+      performance.measure(markName, markName, markNameToCompare || markName);
+      if (!!marksObserver[markName]) {
+        return marksObserver[markName] as PerfMarksPerformanceEntry;
+      }
       return startTime
         ? ({ duration: getTimeNow() - startTime, startTime, entryType: 'measure', name: markName } as PerformanceEntry)
         : {};
@@ -109,6 +130,7 @@ const end = (markName: string, markNameToCompare?: string): PerfMarksPerformance
  */
 const clearAll = (): void => {
   marksMap = {};
+  marksObserver = {};
 
   if (!isUserTimingAPISupported) {
     return;
