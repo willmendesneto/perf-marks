@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.9.0][] - 2020-07-24
+
 ### Added
 
 - Adding support for NodeJS and VanillaJS. Now it runs in frontend and backend 🎉
@@ -224,3 +226,7 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.8.0]: https://github.com/willmendesneto/perf-marks/tree/v1.8.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.8.1...HEAD
 [1.8.1]: https://github.com/willmendesneto/perf-marks/tree/v1.8.1
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.9.0...HEAD
+[1.9.0]: https://github.com/willmendesneto/perf-marks/tree/v1.9.0
