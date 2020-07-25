@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.10.1][] - 2020-07-25
+
 ### Updated
 
 - Checking entrypoints bundle size in `yarn bundlesize` command
@@ -240,3 +242,7 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.9.0]: https://github.com/willmendesneto/perf-marks/tree/v1.9.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.10.0...HEAD
 [1.10.0]: https://github.com/willmendesneto/perf-marks/tree/v1.10.0
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.10.1...HEAD
+[1.10.1]: https://github.com/willmendesneto/perf-marks/tree/v1.10.1
