@@ -237,15 +237,15 @@ By definition it will use CJS as the main distribution entrypoint used in the ap
 ### Exposed entrypoints
 
 - `perf-marks/marks`: it has all the methods for marks
-  - `start`
-  - `end`
-  - `clear`
-  - `clearAll`
-  - `isUserTimingAPISupported`
-  - `isPerformanceObservableSupported`
+  - `start`: Frontend and Backend support
+  - `end`: Frontend and Backend support
+  - `clear`: Frontend and Backend support
+  - `clearAll`: Frontend and Backend support
+  - `isUserTimingAPISupported`: Frontend and Backend support
+  - `isPerformanceObservableSupported`: Frontend and Backend support
 - `perf-marks/entries`: it has all the methods to get entries
-  - `getNavigationMarker`
-  - `getEntriesByType`
+  - `getNavigationMarker`: Frontend support only
+  - `getEntriesByType`: frontend support only
 
 If you need optimize your bundle size even more, this package provides different bundles for `CommonJS`, `UMD`, `ESM` and `ES2015`. To make the dev experience smoothiest as possible, you can use `babel-plugin-transform-imports` in your app and configure the bundle that fits the most for your app!
 
