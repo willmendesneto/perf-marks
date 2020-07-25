@@ -247,9 +247,9 @@ By definition it will use CJS as the main distribution entrypoint used in the ap
   - `getNavigationMarker`: Frontend support only
   - `getEntriesByType`: frontend support only
 - `perf-marks/utils`: it has all the feature, and platform checks and validations
-  - `isNodeJSEnv`: Boolean with the result of the check if package is running on the browser or in a NodeJS environment
-  - `isPerformanceObservableSupported`: Boolean with the result of the check if `PerformanceObservable` is supported for the current browser/NodeJS version
-  - `isUserTimingAPISupported`: Boolean with the result of the check if User Timing API is supported for the current browser/NodeJS version
+  - `isNodeJSEnv`: Frontend and Backend support. Boolean with the result of the check if package is running on the browser or in a NodeJS environment
+  - `isPerformanceObservableSupported`: Frontend and Backend support. Boolean with the result of the check if `PerformanceObservable` is supported for the current browser/NodeJS version
+  - `isUserTimingAPISupported`: Frontend and Backend support. Boolean with the result of the check if User Timing API is supported for the current browser/NodeJS version
 
 If you need optimize your bundle size even more, this package provides different bundles for `CommonJS`, `UMD`, `ESM` and `ES2015`. To make the dev experience smoothiest as possible, you can use `babel-plugin-transform-imports` in your app and configure the bundle that fits the most for your app!
 
