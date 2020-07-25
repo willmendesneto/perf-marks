@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.10.0][] - 2020-07-24
+
 ### Updated
 
 - Using PerformanceObserver as first-class data if code is running in NodeJS
@@ -232,3 +234,7 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.8.1]: https://github.com/willmendesneto/perf-marks/tree/v1.8.1
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.9.0...HEAD
 [1.9.0]: https://github.com/willmendesneto/perf-marks/tree/v1.9.0
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.10.0...HEAD
+[1.10.0]: https://github.com/willmendesneto/perf-marks/tree/v1.10.0
