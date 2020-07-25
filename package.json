@@ -44,6 +44,7 @@
     "jest": "^26.0.1",
     "jsdom": "^16.2.2",
     "lint-staged": "^10.2.2",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "rollup": "^2.9.1",
     "ts-jest": "^26.0.0",
@@ -60,7 +61,7 @@
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf ./dist ./.jest ./coverage ./lib",
-    "build": "yarn build:es2015 && yarn build:cjs && yarn build:esm && yarn build:umd",
+    "build": "npm-run-all --parallel build:es2015 build:cjs build:esm && yarn build:umd",
     "build:umd": "rollup dist/esm/index.js --format umd --name PerfMarks -o dist/umd/perf-marks.js && yarn build:umd:min",
     "build:umd:min": "uglifyjs --compress --mangle --screw-ie8 --comments -o dist/umd/perf-marks.min.js -- dist/umd/perf-marks.js && gzip dist/umd/perf-marks.min.js -c > dist/umd/perf-marks.min.js.gz",
     "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
