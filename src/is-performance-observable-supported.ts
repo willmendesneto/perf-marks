@@ -7,7 +7,9 @@
  */
 const isPerformanceObservableSupported =
   typeof PerformanceObserver !== 'undefined' &&
+  // eslint-disable-next-line compat/compat
   typeof PerformanceObserver.prototype !== 'undefined' &&
+  // eslint-disable-next-line compat/compat
   typeof PerformanceObserver.prototype.constructor === 'function';
 
 export { isPerformanceObservableSupported };
