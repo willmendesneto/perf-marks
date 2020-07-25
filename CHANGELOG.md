@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Adding new entry point for checkers. These checkers are exposing
+  - `isNodeJSEnv`: Boolean with the result of the check if package is running on the browser or in a NodeJS environment
+  - `isPerformanceObservableSupported`: Boolean with the result of the check if `PerformanceObservable` is supported for the current browser/NodeJS version
+  - `isUserTimingAPISupported`: Boolean with the result of the check if User Timing API is supported for the current browser/NodeJS version
+
 ## [1.10.1][] - 2020-07-25
 
 ### Updated
@@ -242,7 +249,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.9.0]: https://github.com/willmendesneto/perf-marks/tree/v1.9.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.10.0...HEAD
 [1.10.0]: https://github.com/willmendesneto/perf-marks/tree/v1.10.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.10.1...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.10.1...HEAD
 [1.10.1]: https://github.com/willmendesneto/perf-marks/tree/v1.10.1
