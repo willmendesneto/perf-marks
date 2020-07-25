@@ -91,11 +91,11 @@
     },
     {
       "path": "./dist/umd/perf-marks.js",
-      "maxSize": "1.81KB"
+      "maxSize": "1.94KB"
     },
     {
       "path": "./dist/umd/perf-marks.min.js",
-      "maxSize": "793B"
+      "maxSize": "840B"
     },
     {
       "path": "./dist/cjs/entrypoints/marks.js",

@@ -11,7 +11,7 @@ module.exports = {
   collectCoverageFrom: ['**/src/*.ts', '!src/index.ts', '!src/user-timing-api-resolver.ts'],
   coverageThreshold: {
     global: {
-      branches: 75,
+      branches: 74,
       functions: 72,
       lines: 87,
       statements: 87,
