@@ -96,6 +96,14 @@
     {
       "path": "./dist/umd/perf-marks.min.js",
       "maxSize": "793B"
+    },
+    {
+      "path": "./dist/cjs/entrypoints/marks.js",
+      "maxSize": "167B"
+    },
+    {
+      "path": "./dist/cjs/entrypoints/entries.js",
+      "maxSize": "167B"
     }
   ],
   "husky": {
