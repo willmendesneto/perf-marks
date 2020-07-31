@@ -11,5 +11,6 @@ out-tsc/
 *.js
 *.d.ts
 !jest.*.js
+!rollup.config.js
 !scripts/*
 *.tgz
