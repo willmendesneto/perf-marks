@@ -62,7 +62,15 @@ describe('PerfMarks: User timing API is NOT available', () => {
   });
 
   it('should run profile if receives callback as promise', async () => {
-    const result = await profiler(() => Promise.resolve(testFunction()), markProfiler);
+    const functionToBeProfiled = () =>
+      // eslint-disable-next-line compat/compat
+      new Promise(resolve => {
+        return setTimeout(() => {
+          resolve(testFunction());
+        }, 500);
+      });
+
+    const result = await profiler(functionToBeProfiled, markProfiler);
 
     expect(result.data).toEqual(2);
     expect(result.mark).toEqual(
