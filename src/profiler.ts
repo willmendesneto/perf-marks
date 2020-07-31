@@ -1,8 +1,5 @@
 import { PerfMarksPerformanceEntry, start, end } from './marks';
 
-// const isPromise = (obj: any) =>
-//   !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
-
 /**
  * profiler using User Timing Api method.
  * It will return a `PerfMarksPerformanceEntry` or
