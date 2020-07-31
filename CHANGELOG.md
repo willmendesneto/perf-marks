@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Adding entry points checks in bundlesize task
+- New method `profiler()` to profile functions using perf-marks. The idea here is to avoid boilerplates on consumer's side by having an easy way to do that. So instead of doing this
+
+```js
+import { start, end } from 'perf-marks/marks';
+const markName = 'name-of-the-mark-for-this-method';
+
+const methodToBeMeasured = () => {
+  /** method content */
+};
+// ...
+start(markName);
+const data = methodToBeMeasured();
+const mark = end(markName);
+return { data, mark };
+```
+
+The consumers can have same effect by doing this
+
+```js
+const methodToBeMeasured = () => {
+  /** method content */
+};
+// `res` will contain `mark` with the information and `data`
+// if `methodToBeMeasured` returns something
+const res = profiler(methodToBeMeasured, 'name-of-the-mark-for-this-method');
+```
+
 ### Fixed
 
 - Fixing entry point for `perf-marks/utils`

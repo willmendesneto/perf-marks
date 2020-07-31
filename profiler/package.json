@@ -1,0 +1,6 @@
+{
+  "name": "perf-marks/profiler",
+  "private": true,
+  "main": "../dist/cjs/entrypoints/profiler.js",
+  "module": "../dist/esm/entrypoints/profiler.js"
+}

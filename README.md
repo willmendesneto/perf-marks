@@ -228,6 +228,19 @@ if (PerfMarks.isPerformanceObservableSupported) {
 ...
 ```
 
+### `PerfMarks.profiler()`
+
+Runs profiler using User Timing Api method to get user timing information. It will return a Promise with `mark` key with a `PerfMarksPerformanceEntry` type OR `mark` key + `data` key with the content for the callback method If the given callback returns something.
+
+```js
+const methodToBeMeasured = () => {
+  /** method content */
+};
+// `res` will contain `mark` with the information and `data`
+// if `methodToBeMeasured` returns something
+const { mark, data } = PerfMarks.profiler(methodToBeMeasured, 'name-of-the-mark-for-this-method');
+```
+
 ## Entrypoints
 
 These are entrypoints for specific components to be used carefully by the consumers. If you're using one of these entrypoints we are assuming you know what you are doing. So it means that code-splitting and tree-shaking should be done on the consumer/product side.
@@ -250,6 +263,8 @@ By definition it will use CJS as the main distribution entrypoint used in the ap
   - `isNodeJSEnv`: Frontend and Backend support. Boolean with the result of the check if package is running on the browser or in a NodeJS environment
   - `isPerformanceObservableSupported`: Frontend and Backend support. Boolean with the result of the check if `PerformanceObservable` is supported for the current browser/NodeJS version
   - `isUserTimingAPISupported`: Frontend and Backend support. Boolean with the result of the check if User Timing API is supported for the current browser/NodeJS version
+- `perf-marks/profiler`: it has all the feature, and platform checks and validations
+  - `profiler`: Frontend and Backend support. profiler using User Timing Api method. It will return a Promise with `mark` key with a `PerfMarksPerformanceEntry` type or `mark` key + `data` key with the content for the callback method If the given callback returns something.
 
 If you need optimize your bundle size even more, this package provides different bundles for `CommonJS`, `UMD`, `ESM` and `ES2015`. To make the dev experience smoothiest as possible, you can use `babel-plugin-transform-imports` in your app and configure the bundle that fits the most for your app!
 

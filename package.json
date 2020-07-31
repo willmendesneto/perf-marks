@@ -79,23 +79,23 @@
   "bundlesize": [
     {
       "path": "./dist/esm/index.js",
-      "maxSize": "118B"
+      "maxSize": "132B"
     },
     {
       "path": "./dist/es2015/index.js",
-      "maxSize": "118B"
+      "maxSize": "132B"
     },
     {
       "path": "./dist/cjs/index.js",
-      "maxSize": "208B"
+      "maxSize": "224B"
     },
     {
       "path": "./dist/umd/perf-marks.js",
-      "maxSize": "1.94KB"
+      "maxSize": "2.6KB"
     },
     {
       "path": "./dist/umd/perf-marks.min.js",
-      "maxSize": "840B"
+      "maxSize": "1.07KB"
     },
     {
       "path": "./dist/cjs/entrypoints/marks.js",
@@ -103,6 +103,14 @@
     },
     {
       "path": "./dist/cjs/entrypoints/entries.js",
+      "maxSize": "167B"
+    },
+    {
+      "path": "./dist/cjs/entrypoints/utils.js",
+      "maxSize": "205B"
+    },
+    {
+      "path": "./dist/cjs/entrypoints/profiler.js",
       "maxSize": "167B"
     }
   ],

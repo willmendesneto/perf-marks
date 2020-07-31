@@ -44,6 +44,7 @@ const clear = (markName: string): void => {
   if (!isNodeJSEnv) {
     performance.clearMeasures(markName);
   }
+
   performance.clearMarks(markName);
 };
 
