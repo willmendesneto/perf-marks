@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Adding `ES2020` bundle on published content. Now the package supports `CommonJS`, `UMD`, `ESM`, `ES2015` and `ES2020` 📦
+
 ## [1.12.2][] - 2020-08-01
 
 ### Fixed
@@ -307,7 +311,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.12.0]: https://github.com/willmendesneto/perf-marks/tree/v1.12.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.12.1...HEAD
 [1.12.1]: https://github.com/willmendesneto/perf-marks/tree/v1.12.1
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.12.2...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.12.2...HEAD
 [1.12.2]: https://github.com/willmendesneto/perf-marks/tree/v1.12.2

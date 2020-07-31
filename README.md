@@ -266,7 +266,9 @@ By definition it will use CJS as the main distribution entrypoint used in the ap
 - `perf-marks/profiler`: it has all the feature, and platform checks and validations
   - `profiler`: Frontend and Backend support. profiler using User Timing Api method. It will return a Promise with `mark` key with a `PerfMarksPerformanceEntry` type or `mark` key + `data` key with the content for the callback method If the given callback returns something.
 
-If you need optimize your bundle size even more, this package provides different bundles for `CommonJS`, `UMD`, `ESM` and `ES2015`. To make the dev experience smoothiest as possible, you can use `babel-plugin-transform-imports` in your app and configure the bundle that fits the most for your app!
+If you need optimize your bundle size even more, this package provides different bundles for `CommonJS`, `UMD`, `ESM`, `ES2015` and `ES2020`. To make the dev experience smoothiest as possible, you can use `babel-plugin-transform-imports` in your app and configure the bundle that fits the most for your app!
+
+> Also, please make sure you configured your module bundler to support these optimized bundles based on your development loop. For Webpack, please check https://webpack.js.org/configuration/resolve/#resolvemainfields for more details or look for the module bundler documentation you're currently using.
 
 ```bash
 yarn add -D babel-plugin-transform-imports

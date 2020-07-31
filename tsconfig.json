@@ -19,7 +19,7 @@
     /* Basic Options */
     "module": "commonjs",
     // "module": "esnext",
-    "lib": ["es2018", "dom", "es5", "scripthost"],
+    "lib": ["es2020", "es2015", "dom", "es5", "scripthost"],
     "emitDecoratorMetadata": true,
     "typeRoots": ["node_modules/@types"],
     // "lib": ["es2018", "dom"],

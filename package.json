@@ -13,7 +13,8 @@
   "jsnext:main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "main": "dist/cjs/index.js",
-  "es2015": "dist/cjs/index.js",
+  "es2015": "dist/es2015/index.js",
+  "es2020": "dist/es2020/index.js",
   "cjs": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
   "keywords": [
@@ -62,9 +63,10 @@
   "scripts": {
     "compile": "tsc",
     "clean": "rm -rf ./dist ./.jest ./coverage ./lib",
-    "build": "npm-run-all --parallel build:es2015 build:cjs build:esm && yarn build:umd",
+    "build": "yarn clean && npm-run-all --parallel build:es2015 build:cjs build:esm build:es2020 && yarn build:umd",
     "build:umd": "rollup --config && yarn build:umd:min",
     "build:umd:min": "uglifyjs --compress --mangle --comments -o dist/umd/perf-marks.min.js -- dist/umd/perf-marks.js && gzip dist/umd/perf-marks.min.js -c > dist/umd/perf-marks.min.js.gz",
+    "build:es2020": "tsc --module esnext --target es2020 --outDir dist/es2020",
     "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
     "build:esm": "tsc --module esnext --target es5 --outDir dist/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
