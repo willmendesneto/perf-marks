@@ -1,5 +1,5 @@
 {
-  "name": "perf-marks/marks",
+  "name": "perf-marks/utils",
   "private": true,
   "main": "../dist/cjs/entrypoints/utils.js",
   "module": "../dist/esm/entrypoints/utils.js"
