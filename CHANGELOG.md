@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- Small bundle fix
+
 ## [1.12.0][] - 2020-07-31
 
 ### Added
@@ -291,7 +295,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.10.1]: https://github.com/willmendesneto/perf-marks/tree/v1.10.1
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.11.0...HEAD
 [1.11.0]: https://github.com/willmendesneto/perf-marks/tree/v1.11.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.12.0...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.12.0...HEAD
 [1.12.0]: https://github.com/willmendesneto/perf-marks/tree/v1.12.0
