@@ -2,5 +2,10 @@
   "name": "perf-marks/entries",
   "private": true,
   "main": "../dist/cjs/entrypoints/entries.js",
-  "module": "../dist/esm/entrypoints/entries.js"
+  "module": "../dist/esm/entrypoints/entries.js",
+  "jsnext:main": "../dist/esm/entrypoints/entries.js",
+  "es2015": "../dist/es2015/entrypoints/entries.js",
+  "es2020": "../dist/es2020/entrypoints/entries.js",
+  "cjs": "../dist/cjs/entrypoints/entries.js",
+  "types": "../dist/cjs/entrypoints/entries.d.ts"
 }

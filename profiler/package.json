@@ -2,5 +2,10 @@
   "name": "perf-marks/profiler",
   "private": true,
   "main": "../dist/cjs/entrypoints/profiler.js",
-  "module": "../dist/esm/entrypoints/profiler.js"
+  "module": "../dist/esm/entrypoints/profiler.js",
+  "jsnext:main": "../dist/esm/entrypoints/profiler.js",
+  "es2015": "../dist/es2015/entrypoints/profiler.js",
+  "es2020": "../dist/es2020/entrypoints/profiler.js",
+  "cjs": "../dist/cjs/entrypoints/profiler.js",
+  "types": "../dist/cjs/entrypoints/profiler.d.ts"
 }

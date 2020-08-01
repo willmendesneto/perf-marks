@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- Updating bundle options for `perf-marks/entries` entry point
+- Updating bundle options for `perf-marks/marks` entry point
+- Updating bundle options for `perf-marks/profiler` entry point
+- Updating bundle options for `perf-marks/utils` entry point
+
 ## [1.13.0][] - 2020-08-01
 
 ### Updated
@@ -315,7 +322,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.12.1]: https://github.com/willmendesneto/perf-marks/tree/v1.12.1
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.12.2...HEAD
 [1.12.2]: https://github.com/willmendesneto/perf-marks/tree/v1.12.2
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.0...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.0...HEAD
 [1.13.0]: https://github.com/willmendesneto/perf-marks/tree/v1.13.0

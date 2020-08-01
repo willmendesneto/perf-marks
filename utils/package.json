@@ -2,5 +2,10 @@
   "name": "perf-marks/utils",
   "private": true,
   "main": "../dist/cjs/entrypoints/utils.js",
-  "module": "../dist/esm/entrypoints/utils.js"
+  "module": "../dist/esm/entrypoints/utils.js",
+  "jsnext:main": "../dist/esm/entrypoints/utils.js",
+  "es2015": "../dist/es2015/entrypoints/utils.js",
+  "es2020": "../dist/es2020/entrypoints/utils.js",
+  "cjs": "../dist/cjs/entrypoints/utils.js",
+  "types": "../dist/cjs/entrypoints/utils.d.ts"
 }

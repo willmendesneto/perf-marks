@@ -2,5 +2,10 @@
   "name": "perf-marks/marks",
   "private": true,
   "main": "../dist/cjs/entrypoints/marks.js",
-  "module": "../dist/esm/entrypoints/marks.js"
+  "module": "../dist/esm/entrypoints/marks.js",
+  "jsnext:main": "../dist/esm/entrypoints/marks.js",
+  "es2015": "../dist/es2015/entrypoints/marks.js",
+  "es2020": "../dist/es2020/entrypoints/marks.js",
+  "cjs": "../dist/cjs/entrypoints/marks.js",
+  "types": "../dist/cjs/entrypoints/marks.d.ts"
 }
