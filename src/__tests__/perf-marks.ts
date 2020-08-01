@@ -76,6 +76,30 @@ describe('PerfMarks: User timing API is available', () => {
     );
   });
 
+  it('should remove mark and compared mark if second parameter was passed to `end()`', () => {
+    jest.spyOn(performance, 'getEntriesByName').mockImplementation(() => [
+      {
+        duration: 1,
+        startTime: 2,
+        toJSON: () => null,
+        entryType: '',
+        name: '',
+      },
+    ]);
+
+    const mark = 'mark';
+    const secondMark = 'mark-end';
+
+    PerfMarks.start(mark);
+    PerfMarks.start(secondMark);
+    PerfMarks.end(mark, secondMark);
+
+    expect(performance.clearMarks).toHaveBeenNthCalledWith(1, mark);
+    expect(performance.clearMarks).toHaveBeenNthCalledWith(2, secondMark);
+    expect(performance.clearMeasures).toHaveBeenNthCalledWith(1, mark);
+    expect(performance.clearMeasures).toHaveBeenNthCalledWith(2, secondMark);
+  });
+
   it('should return user timing information if user finishes mark', () => {
     const mark = 'mark';
     PerfMarks.start(mark);

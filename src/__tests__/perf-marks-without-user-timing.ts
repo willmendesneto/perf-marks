@@ -56,8 +56,11 @@ describe('PerfMarks: User timing API is NOT available', () => {
 
   it('should return user timing information if user finishes mark', () => {
     const mark = 'mark';
+    const secondMark = 'mark-end';
+
     PerfMarks.start(mark);
-    const result = PerfMarks.end(mark);
+    PerfMarks.start(secondMark);
+    const result = PerfMarks.end(mark, secondMark);
 
     expect(result).toEqual(
       expect.objectContaining({

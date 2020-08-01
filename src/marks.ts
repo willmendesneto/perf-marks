@@ -120,6 +120,10 @@ const end = (markName: string, markNameToCompare?: string): PerfMarksPerformance
   } finally {
     // Clear marks immediately to avoid growing buffer.
     clear(markName);
+    // Clear marks used for comparison in case of it's value was passed
+    if (markNameToCompare) {
+      clear(markNameToCompare);
+    }
   }
 };
 
