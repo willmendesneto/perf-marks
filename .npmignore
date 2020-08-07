@@ -2,7 +2,9 @@
 /demo/
 .*
 bower.json
+greenkeeper.json
 karma.conf.js
+rollup.config.js
 src
 coverage
 .nyc_output

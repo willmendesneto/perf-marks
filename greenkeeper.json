@@ -4,6 +4,8 @@
       "packages": [
         "entries/package.json",
         "marks/package.json",
+        "profiler/package.json",
+        "utils/package.json",
         "package.json"
       ]
     }
