@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Adding dependency check via `depcheck` package
+
 ### Updated
 
 - Updating dependencies to latest

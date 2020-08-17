@@ -1,0 +1,1 @@
+ignores: ["@types/*", "@typescript-eslint/*", "bundlesize", "changelog-verify", "coveralls", "depcheck", "eslint*", "husky", "jest", "jsdom", "lint-staged", "npm-run-all", "prettier", "rollup*", "ts-*", "typescript", "typings", "uglify-js", "usertiming", "version-changelog", "tslib"]

@@ -20,6 +20,8 @@ tsconfig.json
 .banner
 package
 *.tgz
+*.log
+rollup.config.js
 
 # ignore OS generated files
 **/.DS_Store
