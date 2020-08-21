@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Removing unnecessary files from content to be published
+- Checking if `module` and `module.require` are available globally before confirm the package is running in a NodeJS environment.
 
 ## [1.13.2][] - 2020-08-01
 

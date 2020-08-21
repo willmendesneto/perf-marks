@@ -1,6 +1,12 @@
 import { isNodeJSEnv } from './is-nodejs-env';
 
-if (isNodeJSEnv && !(global as any).PerformanceObserver && !(global as any).performance) {
+if (
+  isNodeJSEnv &&
+  !(global as any).PerformanceObserver &&
+  !(global as any).performance &&
+  module &&
+  typeof module.require === 'function'
+) {
   /**
    * Requires a module which is protected against bundler minification.
    *
