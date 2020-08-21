@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- Fixing package distribution issue
+
 ## [1.13.3][] - 2020-08-21
 
 ### Added
@@ -351,7 +355,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.13.1]: https://github.com/willmendesneto/perf-marks/tree/v1.13.1
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.2...HEAD
 [1.13.2]: https://github.com/willmendesneto/perf-marks/tree/v1.13.2
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.3...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.3...HEAD
 [1.13.3]: https://github.com/willmendesneto/perf-marks/tree/v1.13.3

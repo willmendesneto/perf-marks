@@ -33,7 +33,8 @@
     "strict": true /* Enable all strict type-checking options. */,
     "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
     "paths": {
-      "*": ["src/entrypoints/*"]
+      "*": ["src/entrypoints/*"],
+      "tslib": ["node_modules/tslib/tslib.d.ts"]
     }
   },
   "include": ["src/**/*"],
