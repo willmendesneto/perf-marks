@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.13.3][] - 2020-08-21
+
 ### Added
 
 - Adding dependency check via `depcheck` package
@@ -349,3 +351,7 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.13.1]: https://github.com/willmendesneto/perf-marks/tree/v1.13.1
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.2...HEAD
 [1.13.2]: https://github.com/willmendesneto/perf-marks/tree/v1.13.2
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.3...HEAD
+[1.13.3]: https://github.com/willmendesneto/perf-marks/tree/v1.13.3
