@@ -32,7 +32,7 @@ const clear = (markName: string): void => {
   marksMap[markName] = undefined;
 
   // Removes PerformanceObserver references from memory
-  if (marksObserver[markName]) {
+  if (!!marksObserver[markName]) {
     marksObserver[markName] = undefined;
   }
 
@@ -93,11 +93,20 @@ const end = (markName: string, markNameToCompare?: string): PerfMarksPerformance
   try {
     const startTime = marksMap[markName];
 
-    // NodeJS is not using performance api directly from them for now
-    if (!isUserTimingAPISupported || isNodeJSEnv) {
-      // `performance.measure()` behaves diferently between frontend and
-      // backend in Javascript applications. Using based on NodeJS docs
-      performance.measure(markName, markName, markNameToCompare || markName);
+    if (!isUserTimingAPISupported) {
+      return startTime
+        ? ({ duration: getTimeNow() - startTime, startTime, entryType: 'measure', name: markName } as PerformanceEntry)
+        : {};
+    }
+    // If there's no User Timing mark to be compared with,
+    // the package will create one to be used for better comparison
+    if (!markNameToCompare) {
+      performance.mark(`${markName}-end`);
+    }
+
+    performance.measure(markName, markName, markNameToCompare || `${markName}-end`);
+
+    if (isNodeJSEnv) {
       if (!!marksObserver[markName]) {
         return marksObserver[markName] as PerfMarksPerformanceEntry;
       }
@@ -106,7 +115,6 @@ const end = (markName: string, markNameToCompare?: string): PerfMarksPerformance
         : {};
     }
 
-    performance.measure(markName, markName, markNameToCompare || undefined);
     const entry: PerformanceEntry | undefined = performance.getEntriesByName(markName).pop();
 
     return entry || {};
@@ -115,15 +123,13 @@ const end = (markName: string, markNameToCompare?: string): PerfMarksPerformance
     // This could only happen if something in event loop crashed
     // in an unexpected place earlier.
     // Don't pile on with more errors.
-
     return {};
   } finally {
     // Clear marks immediately to avoid growing buffer.
     clear(markName);
     // Clear marks used for comparison in case of it's value was passed
-    if (markNameToCompare) {
-      clear(markNameToCompare);
-    }
+    // If the mark to compare is not passed, it should remove the one we create with `-end` suffix
+    clear(markNameToCompare || `${markName}-end`);
   }
 };
 

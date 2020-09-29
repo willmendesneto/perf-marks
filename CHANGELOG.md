@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Updated
+
+- `end()`: Adding built-in mark to compare if the application is not passing the values. This will give us all the required information for the consumers.
+
+Without passing a mark to compare
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+...
+const markResults: PerfMarks.PerfMarksPerformanceEntry = PerfMarks.end('name-of-your-mark');
+```
+
+Passing a mark to compare
+
+```js
+import * as PerfMarks from 'perf-marks';
+
+...
+PerfMarks.start('name-of-your-mark');
+PerfMarks.start('name-of-your-mark-to-be-compared-with');
+...
+const markResults: PerfMarks.PerfMarksPerformanceEntry = PerfMarks.end(
+  'name-of-your-mark',
+  'name-of-your-mark-to-be-compared-with'
+);
+```
+
 ## [1.13.4][] - 2020-08-21
 
 ### Fixed
@@ -359,7 +389,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.13.2]: https://github.com/willmendesneto/perf-marks/tree/v1.13.2
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.3...HEAD
 [1.13.3]: https://github.com/willmendesneto/perf-marks/tree/v1.13.3
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.4...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.13.4...HEAD
 [1.13.4]: https://github.com/willmendesneto/perf-marks/tree/v1.13.4

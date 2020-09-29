@@ -111,11 +111,15 @@ PerfMarks.start('name-of-your-mark');
 ...
 ```
 
-### `PerfMarks.end(markName)`
+### `PerfMarks.end(markName, markNameToCompare)`
 
 Returns the results for the specified marker.
 
 > `PerfMarks.end(markName)` calls `PerfMarks.clear(markName)` after return the mark values
+
+If `markNameToCompare` value is not passed, the package will create a mark using `markName + '-end'`. Otherwise, it will compare based on the given mark.
+
+> If you're passing `markNameToCompare` value, please make sure you're also started the mark with the same name previously
 
 ```js
 import * as PerfMarks from 'perf-marks';
