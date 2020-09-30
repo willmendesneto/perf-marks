@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Updated
 
+- Updating package dependencies
 - `end()`: Adding built-in mark to compare if the application is not passing the values. This will give us all the required information for the consumers.
 
 Without passing a mark to compare
