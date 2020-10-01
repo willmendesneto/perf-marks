@@ -146,7 +146,7 @@ PerfMarks.clear('name-of-your-mark');
 
 ### `PerfMarks.clearAll()`
 
-Removes all the marker
+Removes all the markers
 
 ```js
 import * as PerfMarks from 'perf-marks';
