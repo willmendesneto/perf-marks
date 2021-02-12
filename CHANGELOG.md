@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Fixed
+
+- Removing jest warning for typescript configuration in `jest.config.js`
+
 ### Updated
 
 - Updating package dependencies
