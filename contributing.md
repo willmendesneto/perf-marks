@@ -9,7 +9,7 @@ Open an issue to report bugs or to propose new features.
 
 - Reporting bugs: describe the bug as clearly as you can, including steps to reproduce, what happened and what you were expecting to happen. Also include browser version, OS and other related software's (npm, Node.js, etc) versions when applicable.
 
-- Proposing features: explain the proposed feature, what it should do, why it is useful, how users should use it. Give us as much info as possible so it will be easier to discuss, access and implement the proposed feature. When you're unsure about a certain aspect of the feature, feel free to leave it open for others to discuss and find an appropriate solution. In case of a specific scenario, please recreate that in our Stackblitz demo (http://stackblitz.com/edit/perf-marks-playground) and share the link. This will help in make the fix as quick as possible 
+- Proposing features: explain the proposed feature, what it should do, why it is useful, how users should use it. Give us as much info as possible so it will be easier to discuss, access and implement the proposed feature. When you're unsure about a certain aspect of the feature, feel free to leave it open for others to discuss and find an appropriate solution. In case of a specific scenario, please recreate that in our Stackblitz demo (http://stackblitz.com/edit/perf-marks-playground) and share the link. This will help in make the fix as quick as possible
 
 ## Proposing pull requests
 

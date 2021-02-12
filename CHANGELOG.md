@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Updated
 
 - Updating package dependencies
+- Updating project to use NodeJS v15.8.0
 
 ## [1.14.0][] - 2020-09-30
 
