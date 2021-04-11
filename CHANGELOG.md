@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Added
+
+- Added blog post link in `README.md`
+
+### Updated
+
+- Decreasing bundle size of main bundle and `perf-marks/marks` entry-point 🎉
+
 ## [1.14.1][] - 2021-02-12
 
 ### Fixed
@@ -407,7 +415,5 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.13.4]: https://github.com/willmendesneto/perf-marks/tree/v1.13.4
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.14.0...HEAD
 [1.14.0]: https://github.com/willmendesneto/perf-marks/tree/v1.14.0
-
-
-[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.14.1...HEAD
+[unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.14.1...HEAD
 [1.14.1]: https://github.com/willmendesneto/perf-marks/tree/v1.14.1

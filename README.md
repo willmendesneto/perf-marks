@@ -17,6 +17,8 @@
 
 ### Why perf-marks?
 
+> If you want to get more details about that, please read ["Cross-platform performance measurements with User Timing API and perf-marks"](https://willmendesneto.com/posts/cross-platform-performance-measurements-with-user-timing-apiand-perf-marks) blog post
+
 That's the simplest and lightweight solution for [User Timing API](https://developer.mozilla.org/en-US/docs/Web/API/User_Timing_API) in Javascript. Simple how it should be.
 
 You can find more details about it in the slides "[User Timing API: because performance matters](http://bit.ly/user-timing-api-because-perf-matters)"

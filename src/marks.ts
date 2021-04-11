@@ -12,13 +12,7 @@ let marksObserver: { [key: string]: PerfMarksPerformanceEntry | undefined } = {}
  * @returns number
  *
  */
-const getTimeNow = (): number => {
-  if (isUserTimingAPISupported) {
-    return performance.now();
-  }
-
-  return Date.now();
-};
+const getTimeNow = (): number => (isUserTimingAPISupported ? performance.now() : Date.now());
 
 /**
  * Clear marks and measure of performance event
