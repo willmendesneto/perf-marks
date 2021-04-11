@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+## [1.14.2][] - 2021-04-11
+
 ### Added
 
 - Added blog post link in `README.md`
@@ -417,3 +419,7 @@ if (PerfMarks.isPerformanceObservableSupported) {
 [1.14.0]: https://github.com/willmendesneto/perf-marks/tree/v1.14.0
 [unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.14.1...HEAD
 [1.14.1]: https://github.com/willmendesneto/perf-marks/tree/v1.14.1
+
+
+[Unreleased]: https://github.com/willmendesneto/perf-marks/compare/v1.14.2...HEAD
+[1.14.2]: https://github.com/willmendesneto/perf-marks/tree/v1.14.2
